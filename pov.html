@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LE POINT DE VUE DE TAÏQO</title>
+    <link rel="stylesheet" href="./pov.css" />
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: white;
+            color: #fff;
+            text-align: right;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 120px; /* Ajustez la hauteur selon vos besoins */
+        }
+        header img {
+            width: 300px; /* Ajustez la largeur selon vos besoins */
+            height: auto; /* Cela permet de conserver les proportions originales du logo */
+        }
+
+
+
+
+        nav {
+            background-color: #085e79;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ffcc00; /* Couleur au survol */
+        }
+
+ 
+
+        .banner {
+            width: 100%;
+            max-height: 200px;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            max-height: 300px; /* Ajustez la hauteur maximale selon vos besoins */
+            object-fit: cover;
+        }
+
+        .article-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .article {
+            flex: 0 0 48%;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            color: #085e79; /* Remplacez 'your_color' par la couleur que vous préférez */
+        }
+
+        .article-title {
+            text-align: center;
+            font-size: 60px;
+            font-family: cursive, sans-serif; /* Utilisez une police manuscrite en priorité, puis une police de secours sans-serif */
+            color: #085e79; /* Remplacez 'your_color' par la couleur que vous préférez */
+}
+
+        .article img {
+            max-width: 100%;
+            max-height: 150px;
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .article:nth-child(even) img {
+            float: right;
+            margin-left: 10px;
+        }
+
+        .article:nth-child(odd) img {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .read-more {
+            display: block;
+            text-align: right;
+            color: #420c4d;
+            text-decoration: none;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+
+                /* Menu burger styles */
+        .burger-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            margin-left: 10px; /* Ajustez la marge à gauche selon vos besoins */
+            color: #085e79; /* Remplacez 'your_color' par la couleur que vous préférez */    
+        }
+
+        
+        footer {
+            background-color: #dbdbdb;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+            color: #085e79; /* Remplacez 'your_color' par la couleur que vous préférez */   
+            position: relative; /* ou position: relative; */
+
+        }
+       
+        footer a {
+            text-decoration: none; /* Supprime le soulignement des liens */
+            color: inherit; /* Assure que la couleur du texte est héritée du parent (peut être ajusté selon vos préférences) */
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            header img {
+                display: block;
+                margin: 0 auto; /* Centre le logo horizontalement */
+    }
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                z-index: 1;
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            .burger-icon {
+                display: block;
+            }
+
+            nav a {
+                float: none;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+        }
+
+    </style>
+
+<script>
+    function toggleNav() {
+        var nav = document.querySelector('nav');
+        nav.classList.toggle('show');
+    }
+</script>
+
+</head>
+
+<body>
+
+    <header>
+        <img src="./public/logo.png" alt="Logo TAÏQO" style="width: 300px; height: auto;">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">ACCUEIL</a></li>        
+            <li><a href="a-propos.html">À PROPOS</a></li>
+            <li><a href="pov.html">P.O.V</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+        <img src="./public/imagearticle@2x.png" alt="Bannière">
+    </div>
+    <h1 class="article-title">Le point de vue de TAÏQO</h1>
+    <div class="article-container">
+        <div class="article">
+            <img src="./public/coaching2.png" alt="Article 1">
+            <p>Le <b>coaching professionnel</b>, levier de succès, s'étend aujourd'hui à toutes les sphères de la vie. Devenu bien plus qu'un outil réservé à l'élite, il guide chacun vers l'épanouissement. Plongeons dans cet univers dynamique où le coaching redéfinit le succès, catalysant des destinées et transcendant les limites. Une démarche proactive d'épanouissement où chaque étape devient une avancée vers une version améliorée de soi-même. Le coaching professionnel, partenaire essentiel dans la quête de l'excellence, forge des succès authentiques à tous niveaux.</p>
+            <a class="read-more" href="coaching.html">Lire l'article complet</a>
+        </div>
+
+        <div class="article">
+            <img src="./public/strategie.png" alt="Article 2">
+            <p>Dans le tumulte incessant du monde des affaires, élaborer une <b>stratégie d'entreprise</b> efficace s'avère être le bouclier ultime pour prospérer et évoluer. Scruter l'environnement commercial, articuler une vision audacieuse et mobiliser les acteurs clés sont autant de pièces maîtresses dans la construction de cette feuille de route. Cet article explore en profondeur les éléments fondamentaux nécessaires à la création d'une stratégie d'entreprise robuste, dévoilant les secrets qui propulsent les organisations vers le succès à long terme. De la flexibilité à l'innovation continue, découvrez comment votre entreprise peut non seulement s'adapter, mais également prospérer dans un paysage commercial en perpétuelle évolution.</p>
+            <a class="read-more" href="strategie.html">Lire l'article complet</a>
+        </div>
+    </div>
+    </div>
+
+ 
+    <footer>
+        <p>&copy; 2023 Taïqo . Tous droits réservés.</p>
+        <a href="mentions-legales.html" class="mentions-legales">Mentions légales</a><br>    
+    </footer>
+    
+
+</body>
+
+</html>

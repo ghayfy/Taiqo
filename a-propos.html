@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À PROPOS DE TAÏQO</title>
+    <link rel="stylesheet" href="./a-propos.css" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #fff;
+            color: #085e79;
+            text-align: right;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-height: 140px; /* Ajustez la hauteur maximale selon vos besoins */
+            overflow: hidden;
+        }
+
+        header img {
+            width: 300px; /* Ajustez la largeur selon vos besoins */
+            height: auto;
+        }
+
+        nav {
+            background-color: #085e79;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .burger-icon {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px 0;
+            color: #333;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #085e79;
+        }
+
+        .banner {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateZ(0);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .banner:hover img {
+            transform: translateZ(0) translateY(-15px);
+        }
+
+        .container-a-propos {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .titre-a-propos {
+            text-align: center;
+            font-size: 36px;
+            color: #085e79;
+            margin-bottom: 20px;
+        }
+
+        .separator-line {
+            height: 2px;
+            background-color: #085e79;
+            margin: 20px 0;
+        }
+
+        .contenu-a-propos p {
+            margin-bottom: 20px;
+            color: #085e79;
+        }
+
+        .contenu-a-propos ul {
+            padding-left: 20px;
+        }
+
+        .contenu-a-propos li {
+            margin-bottom: 10px;
+        }
+
+        .article-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px -10px;
+        }
+
+        .article {
+            flex: 0 0 48%;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            color: #085e79;
+            border-radius: 8px;
+        }
+
+        .article img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .article:nth-child(even) img {
+            float: right;
+            margin-left: 10px;
+        }
+
+        .article:nth-child(odd) img {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .article-title {
+            text-align: center;
+            font-size: 24px;
+            font-family: 'Cursive', sans-serif;
+            color: #085e79;
+            margin-bottom: 10px;
+        }
+
+        .read-more {
+            display: block;
+            text-align: right;
+            color: #420c4d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+
+@media only screen and (max-width: 600px) {
+  header {
+            background-color: #fff;
+            color: #085e79;
+            text-align: right;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-height: 140px; /* Ajustez la hauteur maximale selon vos besoins */
+            overflow: hidden;
+        }
+
+    header img {
+        width: 150px; /* Ajustez la largeur selon vos besoins */
+        margin-bottom: 10px; /* Ajoutez un espacement en bas du logo */
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+        background-color: #085e79;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .burger-icon {
+        display: block;
+        color: #fff;
+    }
+
+    nav a {
+        float: none;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .banner {
+        height: auto;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+        transform: translateZ(0) translateY(-10px);
+    }
+
+    .contenaire-a-propos {
+        padding: 10px;
+    }
+}
+
+
+/* Styles pour la version responsive */
+@media only screen and (max-width: 600px) {
+    .banner {
+        height: 100px; /* Ajustez la hauteur selon vos besoins */
+        overflow: hidden;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+        transform: translateZ(0) translateY(-10px); /* Ajustez la translation verticale selon vos besoins */
+    }
+
+    .contenaire-a-propos {
+        padding: 10px;
+    }
+
+
+    .titre-a-propos {
+        font-size: 34px; /* Ajustez la taille de la police selon vos besoins */
+    }
+}
+        </style>
+
+        <script>
+            function toggleNav() {
+                var nav = document.querySelector('nav');
+                nav.classList.toggle('show');
+            }
+            
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <img src="./public/logo.png" alt="Logo TAÏQO">
+        <div class="burger-icon" onclick="toggleNav()">☰</div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">ACCUEIL</a></li>
+            <li><a href="a-propos.html">À PROPOS</a></li>
+            <li><a href="pov.html">P.O.V</a></li>
+        </ul>
+    </nav>
+
+    <div class="banner">
+      <img src="./public/imageabout@2x.png" alt="Bannière">
+  </div>
+
+  <div class="container-a-propos">
+      <h1 class="titre-a-propos">Qui sommes-nous ?</h1>
+      <div class="separator-line"></div>
+      <div class="contenu-a-propos">
+          <p>Bienvenue chez TAÏQO, votre partenaire de confiance en conseils d'entreprise. Nous mettons en œuvre une approche novatrice en combinant expertise humaine et stratégie digitale. Notre mission est de vous guider à travers les sphères stratégiques, organisationnelles et digitales pour optimiser vos performances.</p>
+          <p>Notre équipe dévouée est composée d'experts chevronnés, engagés à concrétiser chaque aspect de votre projet, de la planification à la mise en œuvre. Nous offrons un accompagnement personnalisé et des programmes de formation en management pour vous orienter à travers le labyrinthe complexe du monde des affaires.</p>
+          <p>Notre engagement envers l'excellence est inébranlable : nous visons à dépasser vos attentes à chaque étape. La satisfaction de nos clients est la boussole qui guide notre succès, et nous nous engageons à fournir des conseils de qualité exceptionnelle.</p>
+          <p><b>Nos valeurs :</b></p>
+          <ul>
+              <li><u>Satisfaction du client :</u> Nous nous engageons à dépasser les attentes en fournissant des conseils de qualité exceptionnelle, adaptés à vos besoins spécifiques.</li>
+              <li><u>Innovation :</u> Nous exploitons les dernières avancées dans le conseil en stratégie et la transformation d'entreprise pour optimiser vos processus, vous offrant ainsi un meilleur retour sur investissement.</li>
+              <li><u>Respect des engagements :</u> Nous honorons nos engagements en menant chaque projet de la conception à la réalisation, garantissant ainsi des résultats de qualité dans les délais convenus.</li>
+          </ul>
+          <p>Faites confiance à notre expertise et à notre engagement envers votre succès. Contactez-nous dès maintenant pour débuter la construction de votre avenir professionnel avec TAÏQO.</p>
+      </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Taïqo . Tous droits réservés.</p>
+    <a href="mentions-legales.html" class="mentions-legales">Mentions légales</a><br>   
+</footer>
+
+
+</body>
+
+</html>
+
