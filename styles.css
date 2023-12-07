@@ -231,7 +231,8 @@ footer a {
 
 
 
-@media screen and (max-width: 600px) {
+/* Pour les très petits écrans (600px et moins) */
+@media only screen and (max-width: 600px) {
     body {
         font-size: 14px;
     }
@@ -251,17 +252,15 @@ footer a {
     }
 
     .logo img {
-        width: 120px; /* Ajustez la largeur du logo selon vos besoins */
-        height: auto; /* La hauteur est automatiquement ajustée pour maintenir les proportions de l'image */
-        margin-top: 50px; /* Ajustez la marge supérieure pour déplacer le logo vers le bas */
+        width: 120px;
+        margin-top: 40px;
     }
 
     .contact-button {
         font-size: 10px;
         padding: 10px 25px;
-        transform: translateY(-30px); /* Utilisez une valeur négative pour déplacer vers le haut */
+        transform: translateY(-30px);
     }
-
 
     h1 {
         font-size: 18px;
@@ -284,19 +283,127 @@ footer a {
         width: calc(100% - 10px);
         height: 150px;
     }
+
     .block h2 {
-        font-size: 20px; /* Ajustez la taille selon vos préférences */
- 
+        font-size: 20px;
     }
-    
+
+    .details {
+        display: none;
+    }
+}
+/* Pour les petites tablettes (601px à 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    header {
+        padding: 120px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+        margin-top: 100px;
+    }
+
+    .header p {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .logo img {
+        width: 150px;
+        margin-top: 30px;
+    }
+
+    .contact-button {
+        font-size: 16px;
+        padding: 15px 35px;
+        transform: translateY(-20px);
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .titre-services {
+        font-size: 40px;
+    }
+
+    .block {
+        height: 200px;
+    }
+
+    .block h2 {
+        font-size: 30px;
+    }
+
+    .details {
+        display: none;
+    }
+}
+
+/* Pour les grandes tablettes (769px à 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    header {
+        padding: 200px;
+    }
+
+    .header h1 {
+        font-size: 40px;
+        margin-top: 120px;
+    }
+
+    .header p {
+        font-size: 18px;
+        margin-top: 50px;
+    }
+
+    .logo img {
+        width: 200px;
+        margin-top: 50px;
+    }
+
+    .contact-button {
+        font-size: 18px;
+        padding: 20px 50px;
+        transform: translateY(-40px);
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .titre-services {
+        font-size: 60px;
+    }
+
+    .block {
+        height: 250px;
+    }
+
+    .block h2 {
+        font-size: 50px;
+    }
+
     .details {
         display: none;
     }
 
-    @media screen and (max-width: 600px) {
-        .block h2 {
-          font-size: 20px; /* Ajustez la taille selon vos préférences pour le mode responsive */
-        }
-      }
-      
 }
+
