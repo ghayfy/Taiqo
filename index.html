@@ -104,6 +104,46 @@
         </a>
     </div>    
 
+<!-- ... Votre contenu existant ... -->
+
+<section id="contact-form">
+    <div class="contact-container">
+        <h2>Contactez-nous</h2>
+        <form id="contactForm" action="process.php" method="post">
+            <label for="name">Votre NOM et Prénom *</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="company">Votre société *</label>
+            <input type="text" id="company" name="company" required>
+
+            <label for="email">Votre e-mail *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Votre téléphone</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="subject">Votre demande concerne *</label>
+            <select id="subject" name="subject" required>
+                <option value="coaching"></option>
+                <option value="coaching">Coaching professionnel</option>
+                <option value="strategie">Stratégie</option>
+                <option value="organisation">Organisation</option>
+                <option value="transformation">Transformation</option>
+                <option value="gestion_crise">Gestion de crise</option>
+                <option value="reglementation">Réglementation aéroportuaire</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+</section>
+
+<!-- ... Votre contenu existant ... -->
+
+    
     <footer>
         <p>&copy; 2023 Taïqo . Tous droits réservés.</p>
         <a href="mentions-legales.html" class="mentions-legales">Mentions légales</a><br>    
