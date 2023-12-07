@@ -229,15 +229,16 @@ footer a {
     color: white;
 }
 
-/* Ajoutez les styles pour la section de contact */
+/* ... Vos styles existants ... */
+
 #contact-form {
-    background-color: #f0f0f0;
+    background-color: #f8f8f8;
     padding: 50px 0;
     text-align: center;
 }
 
 .contact-container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -246,20 +247,27 @@ footer a {
 }
 
 #contact-form form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: grid;
+    gap: 8px;
 }
 
 #contact-form label {
-    margin-bottom: 8px;
     color: #333;
+    font-weight: bold;
 }
 
 #contact-form input,
+#contact-form select,
 #contact-form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 #contact-form button {
@@ -269,6 +277,7 @@ footer a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
 #contact-form button:hover {
@@ -277,19 +286,6 @@ footer a {
 
 /* ... Vos styles existants ... */
 
-#contact-form form label,
-#contact-form form select,
-#contact-form form textarea {
-    display: block;
-    margin-bottom: 10px;
-}
-
-#contact-form form select {
-    width: 100%;
-    padding: 10px;
-}
-
-/* ... Vos styles existants ... */
 
 
 /* Pour les très petits écrans (600px et moins) */

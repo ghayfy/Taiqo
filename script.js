@@ -72,11 +72,11 @@ function adjustTitleSizes() {
     });
 }
 
-// Réajuster la taille des titres lors du redimensionnement de la fenêtre
-window.addEventListener("resize", function () {
-    adjustTitleSizes();
-});
+
+
 document.addEventListener("DOMContentLoaded", function () {
   adjustTitleSizes(); // Appel initial pour ajuster les tailles au chargement de la page
 });
+
+
 
