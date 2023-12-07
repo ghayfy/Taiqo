@@ -8,20 +8,20 @@ header {
     background-size: cover;
     background-position: center;
     color: #085e79;
-    padding: 320px; /* Ajustez la taille du de l'image de fond selon vos besoins */
+    padding: 400px; /* Ajustez la taille du de l'image de fond selon vos besoins */
     text-align: center;
     position: relative;
 }
 /* Ajustez la taille de la police pour le titre dans le header */
 .header h1 {
     font-size: 66px; /* Ajustez la taille selon vos préférences */
-    margin-top: 120px; /* Déplace le bloc vers le bas de 220px */
+    margin-top: 160px; /* Déplace le bloc vers le bas de 220px */
 }
 
 /* Ajustez la taille de la police pour le slogan dans le header */
 .header p {
-    font-size: 20px; /* Ajustez la taille selon vos préférences */
-    margin-top: 30px; /* Déplace le bloc vers le bas de 220px */
+    font-size: 25px; /* Ajustez la taille selon vos préférences */
+    margin-top: 60px; /* Déplace le bloc vers le bas de 220px */
 }
 .header-content {
     position: absolute;
@@ -29,6 +29,11 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+header .banner img {
+    max-height: 400px; /* Ajustez la taille maximale selon vos besoins */
+    width: auto; /* Assure le redimensionnement proportionnel en fonction de la hauteur maximale */
+}
+
 
 .logo {
     position: absolute;
@@ -46,7 +51,7 @@ header {
 
 
 .contact-button-container {
-    margin-top: 40px;  /* Ajustez la valeur de margin-top selon vos besoins pour déplacer le bouton verticalement */
+    margin-top: 50px;  /* Ajustez la valeur de margin-top selon vos besoins pour déplacer le bouton verticalement */
 }
 
 .contact-button {
@@ -96,7 +101,7 @@ header {
     gap: 40px;
     font-size: 18px;
     color: #333;
-    margin-top: 40px; /* Déplace le bloc vers le bas de 220px */
+    margin-top: 30px; /* Déplace le bloc vers le bas de 220px */
     margin-left: auto; /* Centre le bloc horizontalement */
     margin-right: auto; /* Centre le bloc horizontalement */
 } 
@@ -154,47 +159,57 @@ h2 {
     font-size: 50px; /* Ajustez la taille du texte selon vos préférences */
 }
 
-/* Nouvelle classe pour les blocs avec des couleurs différentes */
 .block {
+    position: relative;
     background-color: #f0f0f0;
-    padding: 20px;
-    margin: 0px auto; /* Ajustez la marge pour réduire l'espace entre les blocs et avoir une marge égale à gauche et à droite */
-    width: calc(33.333% - 10px); /* 33.333% pour 3 blocs par ligne, en tenant compte de la marge */
+    padding: 0;
+    margin: 0px auto;
+    width: calc(33.333% - 10px);
     display: inline-block;
     box-sizing: border-box;
-    height: 300px; /* Hauteur fixe des blocs */
-    overflow: auto; /* Ajout d'une barre de défilement si le contenu dépasse la hauteur */
+    height: 300px;
+    overflow: hidden;
 }
 
 .block:nth-child(odd) {
     background-color: #e0e0e0;
 }
 
-/* Ajustement pour avoir une marge égale à gauche et à droite */
-.container {
-    text-align: center;
+.block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
-/* Pour centrer les blocs dans la container */
+.centered-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #333;
+    z-index: 1;
+}
+
+.block h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    overflow: hidden; /* Pour s'assurer que le fond blanc ne dépasse pas le texte */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+}
+
+.container a {
+    text-decoration: none;
+}
+.container {
+    text-align: center;
+    margin-left: 0px; /* Ajustez la marge à gauche selon vos besoins */
+}
+
 .block-container {
     margin: 0 auto;
     max-width: 900px; /* Ajustez selon vos besoins */
-}
-
-/* Nouvelle classe pour les titres à l'intérieur des blocs */
-.centered-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-/* Nouvelle classe pour les titres à l'intérieur des blocs */
-.block h2 {
-    font-size: 40px; /* Ajustez la taille selon vos préférences */
-    margin-bottom: 10px; /* Ajustez la marge inférieure selon vos préférences */
-}
-.container a {
-    text-decoration: none;
 }
 
 
@@ -214,6 +229,8 @@ footer a {
     color: white;
 }
 
+
+
 @media screen and (max-width: 600px) {
     body {
         font-size: 14px;
@@ -224,7 +241,7 @@ footer a {
     }
 
     .header h1 {
-        font-size: 18px;
+        font-size: 15px;
         margin-top: 60px;
     }
 
@@ -234,16 +251,17 @@ footer a {
     }
 
     .logo img {
-        width: 180px; /* Ajustez la largeur du logo selon vos besoins */
+        width: 120px; /* Ajustez la largeur du logo selon vos besoins */
         height: auto; /* La hauteur est automatiquement ajustée pour maintenir les proportions de l'image */
-        margin-top: 20px; /* Ajustez la marge supérieure pour déplacer le logo vers le bas */
+        margin-top: 50px; /* Ajustez la marge supérieure pour déplacer le logo vers le bas */
     }
 
     .contact-button {
         font-size: 10px;
         padding: 10px 25px;
-        margin-top: -20px;
+        transform: translateY(-30px); /* Utilisez une valeur négative pour déplacer vers le haut */
     }
+
 
     h1 {
         font-size: 18px;
@@ -274,4 +292,11 @@ footer a {
     .details {
         display: none;
     }
+
+    @media screen and (max-width: 600px) {
+        .block h2 {
+          font-size: 20px; /* Ajustez la taille selon vos préférences pour le mode responsive */
+        }
+      }
+      
 }
