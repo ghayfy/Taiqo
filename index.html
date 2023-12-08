@@ -10,7 +10,7 @@
 
     <header class="header" style="background-image: url('./public/headingframe@3x.png');"> 
         <div class="logo">
-            <img src="./public//logo.png" alt="Logo de Votre Société">
+            <img src="./public//logo.png" alt="Logo de TAÏQO">
         </div>
         <div class="header-content">
             <h1 class="title">Innover pour exceller</h1>
@@ -20,38 +20,37 @@
             <div class="contact-button-container">
                 <a href="mailto:contact@taiqo.fr" class="contact-button">Contactez-nous</a>
             </div>
-            
-            <div class="details">
+    
+            <div class="details" id="details">
                 <div class="detail">
-                  <img class="check-icon" alt="" src="./public/check.svg" />
-                  <div class="avantage">Performance</div>
+                    <img class="check-icon" alt="" src="./public/check.svg" />
+                    <div class="avantage">Performance</div>
                 </div>
                 <div class="detail">
-                  <img class="check-icon" alt="" src="./public/check.svg" />
-                  <div class="avantage">Expertise</div>
+                    <img class="check-icon" alt="" src="./public/check.svg" />
+                    <div class="avantage">Expertise</div>
                 </div>
                 <div class="detail">
-                  <img class="check-icon" alt="" src="./public/check.svg" />
-                  <div class="avantage">Efficacité</div>
+                    <img class="check-icon" alt="" src="./public/check.svg" />
+                    <div class="avantage">Efficacité</div>
                 </div>
                 <div class="detail">
-                  <img class="check-icon" alt="" src="./public/check.svg" />
-                  <div class="avantage">Rentabilité</div>
+                    <img class="check-icon" alt="" src="./public/check.svg" />
+                    <div class="avantage">Rentabilité</div>
                 </div>
-              </div>
+            </div>
         </div>
-
-      
-          
     </header>
+    
 
     <nav>
         <ul>
-            <li><a href="index.html">ACCUEIL</a></li>       
-            <li><a href="a-propos.html">À PROPOS</a></li>
-            <li><a href="pov.html">P.O.V</a></li>
+            <li><a href="index.html">Accueil</a></li>       
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="pov.html">Blog</a></li>
         </ul>
     </nav>
+
     <h2 class="titre-services">Nos Services</h2>
        
     <div class="container">
@@ -105,35 +104,34 @@
     </div>    
 
 <!-- ... Votre contenu existant ... -->
-
 <section id="contact-form">
     <div class="contact-container">
         <h2>Contactez-nous</h2>
-        <form id="contactForm" action="process.php" method="post">
+        <form id="contactForm" action="#" method="post">
             <div class="form-group">
                 <label for="name">Votre NOM et Prénom *</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="Entrez votre nom et prénom" required>
             </div>
 
             <div class="form-group">
                 <label for="company">Votre société *</label>
-                <input type="text" id="company" name="company" required>
+                <input type="text" id="company" name="company" placeholder="Entrez le nom de votre société" required>
             </div>
 
             <div class="form-group">
                 <label for="email">Votre e-mail *</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="Entrez votre adresse e-mail" required>
             </div>
 
             <div class="form-group">
                 <label for="phone">Votre téléphone</label>
-                <input type="tel" id="phone" name="phone">
+                <input type="tel" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone">
             </div>
 
             <div class="form-group">
                 <label for="subject">Votre demande concerne *</label>
                 <select id="subject" name="subject" required>
-                    <option value="coaching"></option>
+                    <option value="" disabled selected>Choisissez une option</option>
                     <option value="coaching">Coaching professionnel</option>
                     <option value="strategie">Stratégie</option>
                     <option value="organisation">Organisation</option>
@@ -145,23 +143,58 @@
 
             <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4"></textarea>
+                <textarea id="message" name="message" rows="4" placeholder="Écrivez votre message ici"></textarea>
             </div>
 
-            <button type="submit">Envoyer</button>
+            <button type="button" onclick="submitForm()">Envoyer</button>
+            <p id="formMessage"></p>
         </form>
     </div>
 </section>
 
-<!-- ... Votre contenu existant ... -->
+<script>
+    function submitForm() {
+        // You can add your form submission logic here
+        // For demonstration purposes, let's display a success message
+        const formMessage = document.getElementById('formMessage');
+        formMessage.innerHTML = 'Votre message a été envoyé avec succès!';
+        formMessage.style.color = '#0a804a'; // Green color for success
+        resetForm();
+    }
+
+    function resetForm() {
+        // You can add logic to reset form fields if needed
+        document.getElementById('contactForm').reset();
+    }
+</script>
 
 
-    
-    <footer>
-        <p>&copy; 2023 Taïqo . Tous droits réservés.</p>
-        <a href="mentions-legales.html" class="mentions-legales">Mentions légales</a><br>    
-    </footer>
 
-    <script src="script.js"></script>
+<footer>
+    <div class="footer-links">
+        <a href="mentions-legales.html" class="mentions-legales">Mentions légales</a>
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="pov.html">Blog</a>
+    </div>
+    <div class="social-icons">
+        <!-- Icônes de médias sociaux avec Font Awesome -->
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div class="contact-info">
+        <p>Email: contact@taiqo.fr</p>
+        <p>Téléphone: +33 123 456 789</p>
+    </div>
+
+    <p>&copy; 2023 Taïqo. Tous droits réservés.</p>
+</footer>
+
+<!-- Ajoutez le script Font Awesome (si nécessaire) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
+
+

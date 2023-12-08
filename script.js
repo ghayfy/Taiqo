@@ -1,15 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const burgerMenu = document.querySelector('.burger-menu');
-    const navLinks = document.querySelector('.nav-links');
+  const blocks = document.querySelectorAll('.block');
 
-    burgerMenu.addEventListener('click', function () {
-        navLinks.classList.toggle('show');
-    });
+  blocks.forEach((block) => {
+      const img = block.querySelector('img');
+      const title = block.querySelector('.centered-title');
+
+      block.addEventListener('mouseenter', function () {
+          img.style.transform = 'scale(1.1)';
+      });
+
+      block.addEventListener('mouseleave', function () {
+          img.style.transform = 'scale(1)';
+      });
+
+      // Ajout d'une gestionnaire d'événements pour le cas où la souris est sur le titre
+      title.addEventListener('mouseenter', function () {
+          img.style.transform = 'scale(1.1)';
+      });
+
+      title.addEventListener('mouseleave', function () {
+          img.style.transform = 'scale(1)';
+      });
+  });
 });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    adjustTitleSizes(); // Appel initial pour ajuster les tailles au chargement de la page
-  });
 
   // Fonction pour ajuster les tailles des titres
   function adjustTitleSizes() {
@@ -80,3 +94,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// Ajout d'une animation de survol pour les avantages
+const details = document.getElementById('details');
+const detailItems = details.querySelectorAll('.detail');
+
+detailItems.forEach(item => {
+    item.addEventListener('mouseover', () => {
+        item.style.transform = 'scale(1.1)';
+    });
+
+    item.addEventListener('mouseout', () => {
+        item.style.transform = 'scale(1)';
+    });
+});
