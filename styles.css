@@ -414,7 +414,7 @@ h2 {
 }
 
 #contact-form h2 {
-    color: #333;
+    color: #085e79;
     font-size: 32px;
     margin-bottom: 30px;
 }
@@ -950,6 +950,14 @@ footer a:hover {
     .contact-button:hover {
         background-color: #085e79;
     }
+}
+
+
+footer, .social-icons, .contact-info {
+    text-align: left;
+    padding: 10px;
+    max-width: 98%; /* Ajustez cette valeur en fonction de vos besoins */
+    margin: 0 auto; /* Centrer le footer */
 }
 
 
