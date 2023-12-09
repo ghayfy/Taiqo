@@ -107,3 +107,29 @@ detailItems.forEach(item => {
         item.style.transform = 'scale(1)';
     });
 });
+
+
+
+//partie formulaire de contact
+    function submitForm() {
+        // You can add your form submission logic here
+        // For demonstration purposes, let's display a success message
+        const formMessage = document.getElementById('formMessage');
+        formMessage.innerHTML = 'Votre message a été envoyé avec succès!';
+        formMessage.style.color = '#0a804a'; // Green color for success
+        resetForm();
+    }
+
+    function resetForm() {
+        // You can add logic to reset form fields if needed
+        document.getElementById('contactForm').reset();
+    }
+
+    $(document).ready(function() {
+      var timer = 4000;
+      var i = 0;
+      var max = $('#c > li').length;
+
+      
+  });
+  
