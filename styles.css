@@ -254,54 +254,81 @@ h2 {
     color: #d5d9db;;
 }
 
-/* Nouveau style pour le footer */
-footer {
-    background-color: #073f50;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+/* partie reference clients*/
+
+
+@-webkit-keyframes s_scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-250px * 8));
+        transform: translateX(calc(-250px * 8));
+    }
+}
+
+@keyframes s_scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-250px * 8));
+        transform: translateX(calc(-250px * 8));
+    }
+}
+
+.slider {
+    background: white;
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
     position: relative;
-    bottom: 0;
     width: 100%;
 }
 
-footer p {
-    font-size: 16px;
-    margin-bottom: 10px;
+.slider::before,
+.slider::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
 }
 
-footer a {
-    text-decoration: none;
-    color: white;
-    margin: 0 15px;
-    transition: color 0.3s ease-in-out;
+.slider::after {
+    right: 0; /* Ajustement pour que le dernier logo parte de la droite */
+    top: 0;
 }
 
-footer a:hover {
-    color: #ffcc00; /* Changement de couleur au survol */
+.slider::before {
+    left: 0;
+    top: 0;
 }
 
-.social-icons {
-    margin-top: 20px;
+.slider .slide-track {
+    -webkit-animation: s_scroll 10s linear infinite;
+    animation: s_scroll 10s linear infinite;
+    display: flex;
+    width: calc(250px * 16); /* 8 logos à afficher, donc multiplier par 16 */
 }
 
-.social-icons a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 24px;
-    transition: color 0.3s ease-in-out;
+.slider .slide {
+    height: 100px;
+    width: 250px;
 }
 
-.social-icons a:hover {
-    color: #0e76a8 ; /* Changement de couleur au survol */
+.slider .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.contact-info {
-    margin-top: 20px;
-}
 
-/* Ajoutez d'autres styles selon vos besoins */
+
+/* partie contact */
 
 #contact-form {
     background-color: #f8f8f8;
@@ -359,11 +386,6 @@ footer a:hover {
 
 
 
-
-
-
-
-
 #contact-form button:hover {
     background-color: #073f50;
 }
@@ -374,7 +396,53 @@ footer a:hover {
     color: #0a804a; /* Green color for success message */
 }
 
-/* ... Vos styles existants ... */
+/* Nouveau style pour le footer */
+footer {
+    background-color: #073f50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #ffcc00; /* Changement de couleur au survol */
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #0e76a8 ; /* Changement de couleur au survol */
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
 
 
 
