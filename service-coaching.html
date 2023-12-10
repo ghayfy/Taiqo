@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #085e79;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Nouveaux styles pour la navigation */
+        nav {
+            background-color: #085e79;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #085e79; /* Couleur du texte dans la navigation */
+            background-color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease-in-out;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #ffcc00;
+            color: #073f50;
+        }
+
+
+        section {
+            padding: 20px; /* Ajustez l'espacement interne selon vos besoins */
+            text-align: left;
+        }
+
+        h2 {
+            color: #085e79;
+        }
+        .titre-services {
+            text-align: left; /* Centre le texte horizontalement */
+            font-size: 50px; /* Ajustez la taille du texte selon vos préférences */
+        }
+
+        .container {
+            text-align: left;
+            margin-left: 2px; /* Ajout de marge à gauche du conteneur */
+            margin-right: 2px; /* Ajout de marge à droite du conteneur */
+        }
+
+
+        section {
+            height: 100%;
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            padding: 2.5rem;
+        }
+
+        .container {
+            max-width: 120rem;
+            padding: 0 1.5rem;
+            margin: 0 auto;
+        }
+
+        .content {
+            display: flex;
+            background-color: #fff;
+            box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .content-img {
+            flex: 1;
+        }
+
+        .content-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-text {
+            flex: 1.5;
+            padding: 4rem;
+        }
+
+        .content-text .content-title {
+            font-family: 'Roboto Mono', monospace;
+            color: #085e79;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #085e79;
+            border-bottom: 2px solid #085e79; /* Ajout d'une ligne sous le titre */
+            padding-bottom: 0.5rem; /* Ajustez la distance entre le titre et la ligne */
+
+        }
+
+        .content-text .content-subtitle {
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #085e79;
+            margin: .5rem 0 2rem;
+        }
+
+        .content-text .content-paragraph {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .content-text .btn {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            padding: 1.5rem 2rem;
+            background-color: #085e79;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .content-text .btn:hover {
+            background-color: #064c63;
+        }
+
+        /* Nouveau style pour le footer */
+        footer {
+            background-color: #073f50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        footer a:hover {
+            color: #ffcc00; /* Changement de couleur au survol */
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-icons a:hover {
+            color: #0e76a8 ; /* Changement de couleur au survol */
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+
+
+        @media screen and (max-width: 1100px) {
+            .content-text {
+                flex: 1;
+            }
+        }
+
+        @media screen and (max-width: 960px) {
+            .content-text .content-paragraph {
+                font-size: 1.4rem;
+                margin-bottom: 1.6rem;
+            }
+
+            .content-text .content-subtitle {
+                font-size: 1.8rem;
+            }
+
+            .content-text .content-title {
+                font-size: 2.5rem;
+            }
+
+            .content-text .btn {
+                padding: 1rem 1.56rem;
+            }
+        }
+
+        @media screen and (max-width: 756px) {
+            .content {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .content-text .content-paragraph {
+                text-align: justify;
+            }
+
+            .content-img {
+                height: 350px;
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 456px) {
+            .content-text .content-paragraph {
+                font-size: 1.2rem;
+            }
+
+            .content-text .content-subtitle {
+                font-size: 1.5rem;
+            }
+
+            .content-text .content-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <title>Notre accompagnement en coaching professionnel</title>
+</head>
+<body>
+
+    <header>
+        <h1>Notre accompagnement en coaching professionnel</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>       
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="pov.html">Blog</a></li>
+        </ul>
+    </nav>
+
+
+ 
+<section>
+    <div class="container">
+        <div class="content">
+            <div class="content-img">
+                <img src="training.png" alt="Body Building">
+            </div>
+            <div class="content-text">
+                <h2 class="content-title">Coaching de dirigeants, de managers :</h2>
+                <h4 class="content-subtitle">Sur les thématiques de performance, de management, de leadership et de visibilité, de gestion du changement, de communication, de prise de poste / promotion, de prévention et gestion de conflits, d’affirmation de soi</h4>
+                <ul class="content-paragraph">
+                    <li>Cadrage</li>
+                    <li>Exploration de la problématique</li>
+                    <li>Prise en compte de l’organisation et des enjeux</li>
+                    <li>Accompagnement personnalisé</li>
+                    <li>Réalisation de plans d’action</li>
+                    <li>Suivi</li>
+                </ul>
+                <h2 class="content-title">Coaching d’équipe : </h2>
+                <h4 class="content-subtitle">teambuilding, cohésion d’équipes, consistency, coaching d’équipe</h4>
+                <ul class="content-paragraph">
+                    <li>Cadrage</li>
+                    <li>Diagnostic</li>
+                    <li>Exploration de la problématique</li>
+                    <li>Prise en compte de l’organisation et des enjeux</li>
+                    <li>Animation de séminaires</li>
+                    <li>Réalisation de plans d’action</li>
+                    <li>Suivi</li>
+                </ul>
+                <a href="mailto:contact@taiqo.fr" class="contact-button">Contactez-nous</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-links">
+        <a href="mentions-legales.html" class="mentions-legales">Mentions légales</a>
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="pov.html">Blog</a>
+    </div>
+    <div class="social-icons">
+        <!-- Icônes de médias sociaux avec Font Awesome -->
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div class="contact-info">
+        <p>Email: contact@taiqo.fr</p>
+        <p>Téléphone: +33 123 456 789</p>
+    </div>
+
+    <p>&copy; 2023 Taïqo. Tous droits réservés.</p>
+</footer>
+
+
+</body>
+</html>
