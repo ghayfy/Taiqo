@@ -129,7 +129,6 @@ detailItems.forEach(item => {
       var timer = 4000;
       var i = 0;
       var max = $('#c > li').length;
-
       
   });
   
