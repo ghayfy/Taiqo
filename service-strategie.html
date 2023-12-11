@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="script.js"></script>
     <style>
         body {
             margin: 0;
@@ -12,16 +15,15 @@
         }
 
         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: #085e79;
             color: #fff;
-            padding: 1rem;
+            padding: 0.2rem 1rem;
             text-align: center;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
 
         /* Nouveaux styles pour la navigation */
         nav {
@@ -109,7 +111,7 @@
         .content-text .content-title {
             font-family: 'Roboto Mono', monospace;
             color: #085e79;
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
             color: #085e79;
             border-bottom: 2px solid #085e79; /* Ajout d'une ligne sous le titre */
@@ -118,7 +120,7 @@
         }
 
         .content-text .content-subtitle {
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             font-weight: 400;
             text-transform: uppercase;
             color: #085e79;
@@ -126,7 +128,7 @@
         }
 
         .content-text .content-paragraph {
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             margin-bottom: 2rem;
             color: #333;
         }
@@ -191,91 +193,101 @@
             color: #0e76a8 ; /* Changement de couleur au survol */
         }
 
+
         .contact-info {
             margin-top: 20px;
         }
 
 
 
-        @media screen and (max-width: 1100px) {
-            .content-text {
-                flex: 1;
-            }
+        /* Média query pour les écrans de petite taille */
+@media screen and (max-width: 756px) {
+    header {
+        display: flex;
+        justify-content: space-between; /* Aligner les éléments sur l'espace disponible */
+        padding: 0.5rem; /* Réduction de la marge intérieure */
+    }
+
+    nav {
+        padding: 10px; /* Réduction de la marge intérieure de la navigation */
+    }
+
+    nav a {
+        font-size: 10px; /* Réduction de la taille de la police de la navigation */
+        padding: 4px 6px; /* Réduction de la taille du bouton de navigation */
+    }
+
+    section {
+        padding: 15px; /* Ajustement de l'espacement du contenu */
+    }
+
+    .content-text {
+        padding: 2rem; /* Ajustement de la marge intérieure du texte */
+    }
+
+    .content-text .content-title {
+        font-size: 1.8rem; /* Réduction de la taille du titre */
+    }
+
+    .content-text .content-subtitle {
+        font-size: 1rem; /* Réduction de la taille du sous-titre */
+        margin: .3rem 0 1rem; /* Ajustement de l'espacement */
+    }
+
+    .content-text .content-paragraph {
+        font-size: 1rem; /* Réduction de la taille du paragraphe */
+        margin-bottom: 1.5rem; /* Ajustement de l'espacement */
+    }
+
+
+    footer {
+        padding: 10px;
+    }
+    footer p {
+            font-size: 13px;
+            margin-bottom: 10px;
         }
-
-        @media screen and (max-width: 960px) {
-            .content-text .content-paragraph {
-                font-size: 1.4rem;
-                margin-bottom: 1.6rem;
-            }
-
-            .content-text .content-subtitle {
-                font-size: 1.8rem;
-            }
-
-            .content-text .content-title {
-                font-size: 2.5rem;
-            }
-
-            .content-text .btn {
-                padding: 1rem 1.56rem;
-            }
+        footer {
+            font-size: 13px;
         }
+}
 
-        @media screen and (max-width: 756px) {
-            .content {
-                flex-direction: column;
-                text-align: left;
-            }
-
-            .content-text .content-paragraph {
-                text-align: justify;
-            }
-
-            .content-img {
-                height: 350px;
-                width: 100%;
-            }
-        }
-
-        @media screen and (max-width: 456px) {
-            .content-text .content-paragraph {
-                font-size: 1.2rem;
-            }
-
-            .content-text .content-subtitle {
-                font-size: 1.5rem;
-            }
-
-            .content-text .content-title {
-                font-size: 2rem;
-            }
-        }
     </style>
     <title>Notre accompagnement en stratégie</title>
 </head>
 <body>
 
     <header>
-        <h1>Notre accompagnement en stratégie</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>       
+                <li><a href="a-propos.html">À propos</a></li>
+                <li><a href="pov.html">Blog</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>       
-            <li><a href="a-propos.html">À propos</a></li>
-            <li><a href="pov.html">Blog</a></li>
-        </ul>
-    </nav>
-
 
  
 <section>
     <div class="container">
         <div class="content">
             <div class="content-img">
-                <img src="action.png" alt="Body Building">
+                <img src="./public/services/strategie.png" alt="Body Building">
             </div>
             <div class="content-text">
+                <h2 class="content-title">Notre accompagnement en stratégie</h2>
+                <p class="content-paragraph">
+                    La définition et la mise en œuvre de stratégies efficaces requièrent une vision holistique et une méthodologie rigoureuse. 
+                    Notre équipe d'experts en stratégie s'immerge dans votre secteur d’activité, ses tendances macro et micro, ses nuances, 
+                    réalise des diagnostics externes et internes, vous accompagne à la définition de votre raison d’être, de votre vision et de vos valeurs, 
+                    pour dégager des orientations stratégiques réalistes et à votre image. 
+                    Nous vous accompagnons pas à pas dans ce challenge qu’est la planification stratégique, 
+                    permettons à la clarté de se faire autour de vos projets et de vos intuitions, traduisons votre vision en axes de développement concrets. 
+                    Nous identifions les meilleures stratégies de positionnement, les leviers de croissance les plus pertinents. 
+                    En construisant des plans d'action opérationnels et sur mesure, nous visons, non seulement à maximiser votre potentiel de croissance actuel, 
+                    mais aussi à positionner votre organisation en tant que leader éclairé dans un environnement commercial en constante évolution. 
+                    Cette démarche enrichit notre approche, créant des stratégies cohérentes, alignées sur votre identité profonde et favorisant une croissance durable.
+                </p>
                 <h2 class="content-title">Phase de Planification</h2>
                 <h4 class="content-subtitle">Réalisation d’un diagnostic stratégique externe avec :</h4>
                 <ul class="content-paragraph">
@@ -297,12 +309,12 @@
            
 
                 <h2 class="content-title">Mise en Œuvre Opérationnelle</h2>
-                <h4 class="content-subtitle">Construction de plans d’action :</h4>
+                <h4 class="content-subtitle">Construction de plans d’action</h4>
                 <ul class="content-paragraph">
                     <li>Par axe stratégique.</li>
                     <li>Pour corriger les faiblesses.</li>
                     <li>Pour prendre en compte les évolutions ou régularisations réglementaires.</li>
-                </ul>
+                </ul><br><br>
                 <a href="mailto:contact@taiqo.fr" class="contact-button">Contactez-nous</a>
             </div>
         </div>
@@ -323,10 +335,10 @@
 
     <div class="contact-info">
         <p>Email: contact@taiqo.fr</p>
-        <p>Téléphone: +33 123 456 789</p>
+        <p>&copy; 2023 Taïqo. Tous droits réservés.</p>
     </div>
 
-    <p>&copy; 2023 Taïqo. Tous droits réservés.</p>
+
 </footer>
 
 

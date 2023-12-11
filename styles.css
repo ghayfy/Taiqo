@@ -1074,6 +1074,22 @@ footer, .social-icons, .contact-info {
     margin: 0 auto; /* Centrer le footer */
 }
 
+footer {
+    padding: 10px;
+}
+footer p {
+    font-size: 12px;
+    margin-bottom: 10px;
+    }
+    footer {
+    font-size: 12px;
+    }
+
+
+header img {
+    display: block;
+    margin: 0 auto; /* Centre le logo horizontalement */
+}
 
 
 }

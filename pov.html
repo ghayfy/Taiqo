@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+        <script src="script.js"></script>
 
 <head>
     <meta charset="UTF-8">
@@ -16,19 +23,19 @@
         header {
             background-color: white;
             color: #fff;
-            text-align: right;
+            text-align: center;
             padding: 10px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
             height: 120px; /* Ajustez la hauteur selon vos besoins */
         }
+
         header img {
             width: 300px; /* Ajustez la largeur selon vos besoins */
             height: auto; /* Cela permet de conserver les proportions originales du logo */
         }
-
-
 
 
         nav {
@@ -50,16 +57,21 @@
 
         nav a {
             text-decoration: none;
-            color: #fff;
+            color: #085e79; /* Couleur du texte dans la navigation */
+            background-color: #fff;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: color 0.3s ease-in-out;
+            padding: 6px 11px;
+            border-radius: 5px;
         }
 
         nav a:hover {
-            color: #ffcc00; /* Couleur au survol */
+            background-color: #ffcc00;
+            color: #073f50;
         }
-
  
 
         .banner {
@@ -126,31 +138,56 @@
         }
 
 
-                /* Menu burger styles */
-        .burger-icon {
-            display: none;
-            cursor: pointer;
-            font-size: 24px;
-            margin-left: 10px; /* Ajustez la marge à gauche selon vos besoins */
-            color: #085e79; /* Remplacez 'your_color' par la couleur que vous préférez */    
-        }
 
         
+        /* Nouveau style pour le footer */
         footer {
-            background-color: #dbdbdb;
+            background-color: #073f50;
+            color: #fff;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
+            position: relative;
             bottom: 0;
             width: 100%;
-            color: #085e79; /* Remplacez 'your_color' par la couleur que vous préférez */   
-            position: relative; /* ou position: relative; */
+        }
 
+        footer p {
+            font-size: 16px;
+            margin-bottom: 10px;
         }
-       
+
         footer a {
-            text-decoration: none; /* Supprime le soulignement des liens */
-            color: inherit; /* Assure que la couleur du texte est héritée du parent (peut être ajusté selon vos préférences) */
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            transition: color 0.3s ease-in-out;
         }
+
+        footer a:hover {
+            color: #ffcc00; /* Changement de couleur au survol */
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .social-icons a:hover {
+            color: #0e76a8 ; /* Changement de couleur au survol */
+        }
+
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
 
         @media only screen and (max-width: 600px) {
 
@@ -172,17 +209,34 @@
                 display: flex;
             }
 
-            .burger-icon {
-                display: block;
-            }
-
+     
             nav a {
                 float: none;
                 width: 100%;
                 box-sizing: border-box;
             }
-
+            footer {
+        padding: 10px;
+    }
+    footer p {
+            font-size: 12px;
+            margin-bottom: 10px;
         }
+        footer {
+            font-size: 12px;
+        }
+
+    
+    header img {
+        display: block;
+        margin: 0 auto; /* Centre le logo horizontalement */
+    }
+
+
+
+}
+
+     
 
     </style>
 
@@ -200,7 +254,6 @@
         <a href="index.html">
             <img src="./public/logo.png" alt="Logo TAÏQO">
         </a>
-        <div class="burger-icon" onclick="toggleNav()">☰</div>
     </header>
     <nav>
         <ul>
@@ -231,9 +284,25 @@
 
  
     <footer>
-        <p>&copy; 2023 Taïqo . Tous droits réservés.</p>
-        <a href="mentions-legales.html" class="mentions-legales">Mentions légales</a><br>    
+        <div class="footer-links">
+            <a href="mentions-legales.html" class="mentions-legales">Mentions légales</a>
+            <a href="index.html">Accueil</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="pov.html">Blog</a>
+        </div>
+        <div class="social-icons">
+            <!-- Icônes de médias sociaux avec Font Awesome -->
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    
+        <div class="contact-info">
+            <p>Email: contact@taiqo.fr</p>
+            <p>&copy; 2023 Taïqo. Tous droits réservés.</p>
+        </div>
+    
+
     </footer>
+    >
     
 
 </body>
