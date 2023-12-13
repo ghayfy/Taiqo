@@ -1,1095 +1,519 @@
-body {
-    font-family: 'Roboto', sans-serif; /* Utilisez la police que vous souhaitez tester */
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-size: cover;
-    background-position: center;
-    color: #085e79;
-    padding: 400px; /* Ajustez la taille du de l'image de fond selon vos besoins */
-    text-align: center;
-    position: relative;
-}
-/* Ajustez la taille de la police pour le titre dans le header */
-.header h1 {
-    font-size: 66px; /* Ajustez la taille selon vos préférences */
-    margin-top: 160px; /* Déplace le bloc vers le bas de 220px */
-}
-
-/* Ajustez la taille de la police pour le slogan dans le header */
-.header p {
-    font-size: 25px; /* Ajustez la taille selon vos préférences */
-    margin-top: 60px; /* Déplace le bloc vers le bas de 220px */
-}
-.header-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-header .banner img {
-    max-height: 400px; /* Ajustez la taille maximale selon vos besoins */
-    width: auto; /* Assure le redimensionnement proportionnel en fonction de la hauteur maximale */
-}
-
-
-.logo {
-    position: absolute;
-    top: -75px; /* Ajustez la marge supérieure selon vos besoins */
-    left: 0;
-    right: 0;
-    margin-left: auto; /* Centre le logo horizontalement */
-    margin-right: auto; /* Centre le logo horizontalement */
-}
-
-.logo img {
-    max-width: 300px; /* Ajustez la taille du logo selon vos besoins */
-    height: auto;
-}
-
-
-.contact-button-container {
-    margin-top: 50px;  /* Ajustez la valeur de margin-top selon vos besoins pour déplacer le bouton verticalement */
-}
-
-.contact-button {
-    background-color: #085e79;
-    color: #fff;
-    font-size: 20px;
-    padding: 20px 70px;
-    border: none;
-    cursor: pointer;
-    border-radius: 15px;
-    transition: background-color 0.3s ease-in-out;
-    text-decoration: none; /* Empêche le surlignement du lien */
-    display: inline-block; /* Permet d'appliquer le margin-top au conteneur */
-}
-
-.contact-button:hover {
-    background-color: #073f50; /* Changement de couleur au survol */
-}
-
-
-.check-icon {
-    position: relative;
-    width: 26px;
-    height: 30px;
-  }
-  
-  .avantage {
-    position: relative;
-    line-height: 1.5;
-  }
-  
-  .detail {
-    align-self: stretch;
-    display: flex;
-    align-items: center; /* Aligner les éléments au centre verticalement */
-    gap: 20px;
-  }
-  /* Styles existants */
-
-/* Nouveaux styles pour les avantages */
-.details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    font-size: 18px;
-    color: #333;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.detail {
-    text-align: center;
-}
-
-.avantage {
-    line-height: 1.5;
-    margin-top: 10px;
-}
-
-/* Nouveaux styles pour les titres */
-.title {
-    font-size: 40px;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.slogan {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-/* Nouveaux styles pour les boutons */
-.contact-button {
-    background-color: #085e79;
-    color: #fff;
-    font-size: 20px;
-    padding: 15px 50px;
-    border: none;
-    cursor: pointer;
-    border-radius: 15px;
-    transition: background-color 0.3s ease-in-out;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.contact-button:hover {
-    background-color: #085e79;
-}
-
-
-
-/* Nouveaux styles pour la navigation */
-nav {
-    background-color: #085e79;
-    padding: 15px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin-right: 20px; /* Espacement plus large entre les éléments */
-}
-
-nav a {
-    text-decoration: none;
-    color: #085e79; /* Couleur du texte dans la navigation */
-    background-color: #fff;
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease-in-out;
-    padding: 10px 15px;
-    border-radius: 5px;
-}
-nav a:hover {
-    background-color: #ffcc00; /* Ajout d'une couleur de fond au survol */
-    color: #073f50; /* Changement de couleur au survol */
-}
-
-section {
-    padding: 20px; /* Ajustez l'espacement interne selon vos besoins */
-    text-align: center;
-}
-
-h2 {
-    color: #085e79;
-}
-.titre-services {
-    text-align: center; /* Centre le texte horizontalement */
-    font-size: 50px; /* Ajustez la taille du texte selon vos préférences */
-}
-
-.container {
-    text-align: center;
-    margin-left: 2px; /* Ajout de marge à gauche du conteneur */
-    margin-right: 2px; /* Ajout de marge à droite du conteneur */
-}
-
-.block {
-    position: relative;
-    padding: 10px; /* Ajout de marges intérieures de 10px à tous les côtés du bloc */
-    margin: 0;
-    width: calc(33.333% - 20px); /* Ajustement de la largeur en conséquence */
-    display: inline-block;
-    box-sizing: border-box;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-
-
-
-.block img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    filter: brightness(60%); /* Assombrit l'image à 70% */
-    border-radius: 12px; /* Assurez-vous que le bord de l'image suit le même rayon que le bloc */
-}
-
-
-.centered-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #333;
-    z-index: 2; /* Augmenté le z-index pour placer le titre au-dessus de l'image */
-}
-
-
-.block h2 {
-    font-size: 28px;
-    margin: 0;
-    padding: 15px;
-    color: #fff; /* Couleur vive */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: color 0.3s ease-in-out;
-    min-width: fit-content;
-    background-color: transparent !important;
-}
-
-.block:hover h2 {
-    color: #d5d9db;
-}
-
-
-/* partie slogan*/
-
-.features-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.feature {
-    text-align: center;
-    max-width: 250px;
-}
-
-.feature img {
-    width: 100%;
-    max-height: 80px;
-    object-fit: contain;
-    margin-bottom: 15px;
-    filter: brightness(0.8) saturate(2) hue-rotate(190deg);
-}
-
-.feature h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #085e79;
-}
-
-.feature p {
-    font-size: 18px;
-    color: #073f50;
-    line-height: 1.5;
-}
-
-/* Style amélioré pour le titre et le texte */
-.feature h2::before {
-    content: '\201C'; /* Guillemet ouvrant élégant */
-    font-size: 36px;
-    color: #085e79; /* Couleur accrocheuse */
-    margin-right: 5px;
-}
-
-.feature h2::after {
-    content: '\201D'; /* Guillemet fermant élégant */
-    font-size: 36px;
-    color: #085e79;
-    margin-left: 5px;
-}
-
-.feature p::before {
-    content: '\201C';
-    font-size: 18px;
-    color: #085e79;
-    margin-right: 5px;
-}
-
-.feature p::after {
-    content: '\201D';
-    font-size: 18px;
-    color: #085e79;
-    margin-left: 5px;
-}
-
-
-
-/* partie reference clients*/
-
-
-@-webkit-keyframes s_scroll {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-    100% {
-        -webkit-transform: translateX(calc(-250px * 8));
-        transform: translateX(calc(-250px * 8));
-    }
-}
-
-@keyframes s_scroll {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-    100% {
-        -webkit-transform: translateX(calc(-250px * 8));
-        transform: translateX(calc(-250px * 8));
-    }
-}
-
-.slider {
-    background: white;
-    height: 100px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-
-.slider::before,
-.slider::after {
-    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
-}
-
-.slider::after {
-    right: 0; /* Ajustement pour que le dernier logo parte de la droite */
-    top: 0;
-}
-
-.slider::before {
-    left: 0;
-    top: 0;
-}
-
-.slider .slide-track {
-    -webkit-animation: s_scroll 10s linear infinite;
-    animation: s_scroll 10s linear infinite;
-    display: flex;
-    width: calc(250px * 16); /* 8 logos à afficher, donc multiplier par 16 */
-}
-
-.slider .slide {
-    height: 100px;
-    width: 250px;
-}
-
-.slider .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-
-
-/* Partie formulaire de contact */
-/* Ajoutez cette classe pour créer une grille */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-/* Partie formulaire de contact */
-#contact-form {
-    background-color: #f4f4f4;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.contact-container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#contact-form h2 {
-    color: #085e79;
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
-#contact-form form {
-    display: grid;
-    gap: 20px;
-}
-
-.form-group {
-    position: relative;
-}
-
-#contact-form input,
-#contact-form select,
-#contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-#contact-form select {
-    appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path d="M1 5l7 7 7-7H1z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 10px top 50%;
-}
-
-#contact-form button {
-    background-color: #085e79;
-    color: white;
-    padding: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    font-size: 18px;
-}
-
-#contact-form button:hover {
-    background-color: #0056b3;
-}
-
-#formMessage {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #28a745;
-}
-
-/* Nouveau style pour le footer */
-footer {
-    background-color: #073f50;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-footer a {
-    text-decoration: none;
-    color: white;
-    margin: 0 15px;
-    transition: color 0.3s ease-in-out;
-}
-
-footer a:hover {
-    color: #ffcc00; /* Changement de couleur au survol */
-}
-
-.social-icons {
-    margin-top: 20px;
-}
-
-.social-icons a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 24px;
-    transition: color 0.3s ease-in-out;
-}
-
-.social-icons a:hover {
-    color: #0e76a8 ; /* Changement de couleur au survol */
-}
-
-.contact-info {
-    margin-top: 20px;
-}
-
-
-
-
-/* Pour les très petits écrans (600px et moins) */
-@media only screen and (max-width: 600px) {
     body {
-        font-size: 14px;
+        font-family: 'Roboto', sans-serif; /* Utilisez la police que vous souhaitez tester */
+        margin: 0;
+        padding: 0;
     }
-
     header {
-        padding: 160px;
-    }
-
-    .header h1 {
-        font-size: 15px;
-        margin-top: 60px;
-    }
-
-    .header p {
-        font-size: 10px;
-        margin-top: 0px;
-    }
-
-    .logo img {
-        width: 120px;
-        margin-top: 40px;
-    }
-
-    .contact-button {
-        font-size: 10px;
-        padding: 10px 25px;
-        transform: translateY(-30px);
-    }
-
-    h1 {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    nav a {
-        font-size: 8px;
-    }
-
-    section {
-        padding: 10px;
-    }
-
-    .titre-services {
-        font-size: 25px;
-    }
-
-    .block {
-        width: calc(100% - 10px);
-        height: 150px;
-    }
-
-    .block h2 {
-        font-size: 20px;
-    }
-
-    .details {
-        display: none;
-    }
-}
-/* Pour les petites tablettes (601px à 768px) */
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-    header {
-        padding: 120px;
-    }
-
-    .header h1 {
-        font-size: 30px;
-        margin-top: 100px;
-    }
-
-    .header p {
-        font-size: 16px;
-        margin-top: 30px;
-    }
-
-    .logo img {
-        width: 150px;
-        margin-top: 30px;
-    }
-
-    .contact-button {
-        font-size: 16px;
-        padding: 15px 35px;
-        transform: translateY(-20px);
-    }
-
-    h1 {
-        font-size: 28px;
-        margin-bottom: 15px;
-    }
-
-    nav a {
-        font-size: 14px;
-    }
-
-    section {
-        padding: 15px;
-    }
-
-    .titre-services {
-        font-size: 40px;
-    }
-
-    .block {
-        height: 200px;
-    }
-
-    .block h2 {
-        font-size: 30px;
-    }
-
-    .details {
-        display: none;
-    }
-}
-
-/* Responsive design pour slogan OK */
-@media (max-width: 768px) {
-    .features-section {
+        background-size: cover;
+        background-position: center;
+        color: #085e79;
+        padding: 7vw; /* Ajustez la taille du de l'image de fond selon vos besoins */
+        text-align: center;
+        position: relative;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Ajustez la taille de la police pour le titre dans le header */
+    .header h1 {
+        font-size: 3vw; /* Ajustez la taille selon vos préférences */
+        margin-top: 2vw; /* Déplace le bloc vers le bas de 220px */
+    }
+    
+    /* Ajustez la taille de la police pour le slogan dans le header */
+    .header p {
+        font-size: 1vw; /* Ajustez la taille selon vos préférences */
+        margin-top: 3vw; /* Déplace le bloc vers le bas de 220px */
+    }
+    
+    .logo {
+        position: absolute;
+        top: -75px; /* Ajustez la marge supérieure selon vos besoins */
+        left: 0;
+        right: 0;
+        margin-left: auto; /* Centre le logo horizontalement */
+        margin-right: auto; /* Centre le logo horizontalement */
+        margin-top: 1vw; /* Déplace le bloc vers le bas de 220px */
+    }
+
+    .logo img {
+        max-width: 300px; /* Ajustez la taille du logo selon vos besoins */
+        height: auto;
+    }
+
+   /* Nouveaux styles pour les boutons */
+    .contact-button-container {
+        margin-top: 50px;  /* Ajustez la valeur de margin-top selon vos besoins pour déplacer le bouton verticalement */
+    }
+
+    .contact-button {
+        background-color: #085e79;
+        color: #fff;
+        font-size: 20px;
+        padding: 15px 40px;
+        border: none;
+        cursor: pointer;
+        border-radius: 15px;
+        transition: background-color 0.3s ease-in-out;
+        text-decoration: none; /* Empêche le surlignement du lien */
+        display: inline-block; /* Permet d'appliquer le margin-top au conteneur */
+    }
+
+    .contact-button:hover {
+        background-color: #ffcc00; /* Changement de couleur au survol */
+    }
+
+    .check-icon {
+        position: relative;
+        width: 26px;
+        height: 30px;
+    }
+    
+    .avantage {
+        position: relative;
+        line-height: 1.5;
+        margin-top: 10px;
+        align-self: stretch;
+        display: flex;
+        align-items: center; /* Aligner les éléments au centre verticalement */
+        gap: 20px;
+    }
+
+    /* Nouveaux styles pour les avantages */
+    .details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        font-size: 15px;
+        color: #333;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px; /* Réduisez la marge supérieure selon vos besoins */
+        margin-bottom: -5px; /* Ajoutez ou réduisez la marge inférieure selon vos besoins */
+        
+
+    }
+
+    .detail {
+        text-align: center;
+    }
+
+    /* Nouveaux styles pour les titres */
+    .title {
+        font-size: 40px;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .slogan {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    /* Nouveaux styles pour la navigation */
+    nav {
+        background-color: #085e79;
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-right: 20px; /* Espacement plus large entre les éléments */
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #085e79; /* Couleur du texte dans la navigation */
+        background-color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.3s ease-in-out;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+    nav a:hover {
+        background-color: #ffcc00; /* Ajout d'une couleur de fond au survol */
+        color: #073f50; /* Changement de couleur au survol */
+    }
+
+    section {
+        padding: 20px; /* Ajustez l'espacement interne selon vos besoins */
+        text-align: center;
+    }
+
+    h2 {
+        color: #085e79;
+    }
+    .titre-services {
+        text-align: center; /* Centre le texte horizontalement */
+        font-size: 50px; /* Ajustez la taille du texte selon vos préférences */
+    }
+
+    .container {
+        text-align: center;
+        margin-left: 2px; /* Ajout de marge à gauche du conteneur */
+        margin-right: 2px; /* Ajout de marge à droite du conteneur */
+    }
+
+    .block {
+        position: relative;
+        padding: 10px; /* Ajout de marges intérieures de 10px à tous les côtés du bloc */
+        margin: 0;
+        width: calc(33.333% - 20px); /* Ajustement de la largeur en conséquence */
+        display: inline-block;
+        box-sizing: border-box;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    .block img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        filter: brightness(60%); /* Assombrit l'image à 70% */
+        border-radius: 12px; /* Assurez-vous que le bord de l'image suit le même rayon que le bloc */
+    }
+
+    .centered-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #333;
+        z-index: 2; /* Augmenté le z-index pour placer le titre au-dessus de l'image */
+    }
+
+    .block h2 {
+        font-size: 28px;
+        margin: 0;
+        padding: 15px;
+        color: #fff; /* Couleur vive */
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: color 0.3s ease-in-out;
+        min-width: fit-content;
+        background-color: transparent !important;
+    }
+
+    .block:hover h2 {
+        color: #d5d9db;
+    }
+
+
+    /* partie slogan*/
+
+    .features-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 50px;
     }
 
     .feature {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-/* Responsive design pour footer OK*/
-@media (max-width: 768px) {
-    footer, .social-icons, .contact-info {
-        text-align: center; /* Centrer le texte */
-        padding: 10px;
-        max-width: 90%; /* Ajustez cette valeur en fonction de vos besoins */
-        margin: 0 auto; /* Centrer le footer */
-    }
-}
-
-/* Responsive design pour header 768x1024 OK*/
-@media screen and (max-width: 768px) and (max-height: 1024px) {
-    body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
+        text-align: center;
+        max-width: 250px;
     }
 
-    header {
-        background-size: cover;
-        background-position: center;
+    .feature img {
+        width: 100%;
+        max-height: 80px;
+        object-fit: contain;
+        margin-bottom: 15px;
+        filter: brightness(0.8) saturate(2) hue-rotate(190deg);
+    }
+
+    .feature h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
         color: #085e79;
-        padding: 400px;
-        text-align: center;
-        position: relative;
     }
 
-    .header h1 {
-        font-size: 35px;
-        margin-top: 100px;
-    }
-
-    .header p {
+    .feature p {
         font-size: 18px;
-        margin-top: 40px;
-    }
-
-    .header-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    header .banner img {
-        max-height: 400px;
-        width: auto;
-    }
-
-    .logo {
-        position: absolute;
-        top: -75px;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 70px;
-    }
-
-    .logo img {
-        max-width: 300px;
-        height: auto;
-    }
-
-    .contact-button-container {
-        margin-top: 40px;
-    }
-
-    .contact-button {
-        background-color: #085e79;
-        color: #fff;
-        font-size: 20px;
-        padding: 20px 70px;
-        border: none;
-        cursor: pointer;
-        border-radius: 15px;
-        transition: background-color 0.3s ease-in-out;
-        text-decoration: none;
-        display: inline-block;
-    }
-
-    .contact-button:hover {
-        background-color: #073f50;
-    }
-
-    .check-icon {
-        position: relative;
-        width: 26px;
-        height: 30px;
-    }
-
-    .avantage {
-        position: relative;
+        color: #073f50;
         line-height: 1.5;
     }
 
-    .detail {
-        align-self: stretch;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .details {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px;
-        font-size: 14px;
-        color: #333;
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .detail {
-        text-align: center;
-    }
-
-    .avantage {
-        line-height: 1.5;
-        margin-top: 10px;
-    }
-
-    .title {
-        font-size: 40px;
-        margin-bottom: 20px;
-        line-height: 1.2;
-    }
-
-    .slogan {
-        font-size: 18px;
-        line-height: 1.5;
-    }
-
-    .contact-button {
-        background-color: #085e79;
-        color: #fff;
-        font-size: 20px;
-        padding: 15px 50px;
-        border: none;
-        cursor: pointer;
-        border-radius: 15px;
-        transition: background-color 0.3s ease-in-out;
-        text-decoration: none;
-        display: inline-block;
-    }
-
-    .contact-button:hover {
-        background-color: #085e79;
-    }
-
-    footer, .social-icons, .contact-info {
-        text-align: center; /* Centrer le texte */
-        padding: 10px;
-        max-width: 95%; /* Ajustez cette valeur en fonction de vos besoins */
-        margin: 0 auto; /* Centrer le footer */
-    }
-    
-}
-
-
-/* Responsive design pour header 2360x1640 OK*/
-@media screen and (max-width: 2360px) and (max-height: 1640px) {
-    body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
-    header {
-        background-size: cover;
-        background-position: center;
-        color: #085e79;
-        padding: 400px;
-        text-align: center;
-        position: relative;
-    }
-
-    .header h1 {
-        font-size: 40px;
-        margin-top: 160px;
-    }
-
-    .header p {
-        font-size: 18px;
-        margin-top: 60px;
-    }
-
-    .header-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    header .banner img {
-        max-height: 400px;
-        width: auto;
-    }
-
-    .logo {
-        position: absolute;
-        top: -75px;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .logo img {
-        max-width: 300px;
-        height: auto;
-        margin-top: 70px;
-    }
-
-    .contact-button-container {
-        margin-top: 50px;
-    }
-
-    .contact-button {
-        background-color: #085e79;
-        color: #fff;
-        font-size: 20px;
-        padding: 20px 70px;
-        border: none;
-        cursor: pointer;
-        border-radius: 15px;
-        transition: background-color 0.3s ease-in-out;
-        text-decoration: none;
-        display: inline-block;
-    }
-
-    .contact-button:hover {
-        background-color: #073f50;
-    }
-
-    .check-icon {
-        position: relative;
-        width: 26px;
-        height: 30px;
-    }
-
-    .avantage {
-        position: relative;
-        line-height: 1.5;
-    }
-
-    .detail {
-        align-self: stretch;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .details {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px;
-        font-size: 16px;
-        color: #333;
-        margin-top: 30px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .detail {
-        text-align: center;
-    }
-
-    .avantage {
-        line-height: 1.5;
-        margin-top: 10px;
-    }
-
-    .title {
-        font-size: 40px;
-        margin-bottom: 20px;
-        line-height: 1.2;
-    }
-
-    .slogan {
-        font-size: 18px;
-        line-height: 1.5;
-    }
-
-    .contact-button {
-        background-color: #085e79;
-        color: #fff;
-        font-size: 20px;
-        padding: 15px 50px;
-        border: none;
-        cursor: pointer;
-        border-radius: 15px;
-        transition: background-color 0.3s ease-in-out;
-        text-decoration: none;
-        display: inline-block;
-    }
-
-    .contact-button:hover {
-        background-color: #085e79;
-    }
-}
-
-
-footer, .social-icons, .contact-info {
-    text-align: center; /* Centrer le texte */
-    padding: 10px;
-    max-width: 98%; /* Ajustez cette valeur en fonction de vos besoins */
-    margin: 0 auto; /* Centrer le footer */
-}
-
-
-
-/* Pour les grandes tablettes (769px à 1024px) */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-    header {
-        padding: 200px;
-    }
-
-    .header h1 {
-        font-size: 40px;
-        margin-top: 120px;
-    }
-
-    .header p {
-        font-size: 18px;
-        margin-top: 50px;
-    }
-
-    .logo img {
-        width: 200px;
-        margin-top: 50px;
-    }
-
-    .contact-button {
-        font-size: 18px;
-        padding: 20px 50px;
-        transform: translateY(-40px);
-    }
-
-    h1 {
+    /* Style amélioré pour le titre et le texte */
+    .feature h2::before {
+        content: '\201C'; /* Guillemet ouvrant élégant */
         font-size: 36px;
-        margin-bottom: 25px;
+        color: #085e79; /* Couleur accrocheuse */
+        margin-right: 5px;
     }
 
-    nav a {
+    .feature h2::after {
+        content: '\201D'; /* Guillemet fermant élégant */
+        font-size: 36px;
+        color: #085e79;
+        margin-left: 5px;
+    }
+
+    .feature p::before {
+        content: '\201C';
         font-size: 18px;
+        color: #085e79;
+        margin-right: 5px;
     }
 
-    section {
-        padding: 20px;
+    .feature p::after {
+        content: '\201D';
+        font-size: 18px;
+        color: #085e79;
+        margin-left: 5px;
     }
 
-    .titre-services {
-        font-size: 60px;
+
+    /* partie reference clients*/
+
+    @-webkit-keyframes s_scroll {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(calc(-250px * 8));
+            transform: translateX(calc(-250px * 8));
+        }
     }
 
-    .block {
-        height: 250px;
+    @keyframes s_scroll {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(calc(-250px * 8));
+            transform: translateX(calc(-250px * 8));
+        }
     }
 
-    .block h2 {
-        font-size: 50px;
+    .slider {
+        background: white;
+        height: 100px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
     }
 
-    .details {
-        display: none;
+    .slider::before,
+    .slider::after {
+        background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
     }
-    
 
-}
+    .slider::after {
+        right: 0; /* Ajustement pour que le dernier logo parte de la droite */
+        top: 0;
+    }
+
+    .slider::before {
+        left: 0;
+        top: 0;
+    }
+
+    .slider .slide-track {
+        -webkit-animation: s_scroll 10s linear infinite;
+        animation: s_scroll 10s linear infinite;
+        display: flex;
+        width: calc(250px * 16); /* 8 logos à afficher, donc multiplier par 16 */
+    }
+
+    .slider .slide {
+        height: 100px;
+        width: 250px;
+    }
+
+    .slider .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 
 
 
+    /* Partie formulaire de contact */
+    /* Ajoutez cette classe pour créer une grille */
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
 
-/* Styles pour les écrans de taille 375 x 667 iphone SE  */
-@media screen and (min-width: 375px) and (max-height: 667px) {
+    /* Partie formulaire de contact */
+    #contact-form {
+        background-color: #f4f4f4;
+        padding: 50px 0;
+        text-align: center;
+    }
 
-    .container {
-        max-width: 375px;
+    .contact-container {
+        max-width: 600px;
         margin: 0 auto;
     }
-    .details {
-        display: none;
+
+    #contact-form h2 {
+        color: #085e79;
+        font-size: 32px;
+        margin-bottom: 30px;
     }
 
-  /* Styles de base */
-header {
-    padding: 150px;
-}
-
-.header p {
-    font-size: 10px;
-    margin-top: -15px;
-}
-
-.header h1 {
-    font-size: 17px;
-    margin-top: 110px;
-}
-
-.container {
-    width: 100%;
-    padding: 15px;
-}
-
-.logo img {
-    width: 120px;
-    margin-top: -15px;
-}
-
-.contact-button {
-    font-size: 12px;
-    padding: 10px 20px;
-    transform: translateY(-40px);
-}
-
-
-
-
-footer, .social-icons, .contact-info {
-    text-align: center; /* Centrer le texte */
-    padding: 10px;
-    max-width: 95%; /* Ajustez cette valeur en fonction de vos besoins */
-    margin: 0 auto; /* Centrer le footer */
-}
-
-footer {
-    padding: 10px;
-}
-footer p {
-    font-size: 12px;
-    margin-bottom: 10px;
+    #contact-form form {
+        display: grid;
+        gap: 20px;
     }
+
+    .form-group {
+        position: relative;
+    }
+
+    #contact-form input,
+    #contact-form select,
+    #contact-form textarea {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    #contact-form select {
+        appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path d="M1 5l7 7 7-7H1z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 10px top 50%;
+    }
+
+    #contact-form button {
+        background-color: #085e79;
+        color: white;
+        padding: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        font-size: 18px;
+    }
+
+    #contact-form button:hover {
+        background-color: #0056b3;
+    }
+
+    #formMessage {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #28a745;
+    }
+
+    /* Nouveau style pour le footer */
     footer {
-    font-size: 12px;
+        background-color: #073f50;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    footer a {
+        text-decoration: none;
+        color: white;
+        margin: 0 15px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    footer a:hover {
+        color: #ffcc00; /* Changement de couleur au survol */
+    }
+
+    .social-icons {
+        margin-top: 20px;
+    }
+
+    .social-icons a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 24px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .social-icons a:hover {
+        color: #0e76a8 ; /* Changement de couleur au survol */
+    }
+
+    .contact-info {
+        margin-top: 20px;
     }
 
 
-header img {
-    display: block;
-    margin: 0 auto; /* Centre le logo horizontalement */
-}
 
+    .container-grille {
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-rows: auto 1fr auto;
+    }
+    
+    /****************************************************************************/
 
+    @media screen and (min-width: 700px) and (max-height: 600px) { 
+
+        
+            /* Ajustez la taille de la police pour le titre dans le header */
+    .header h1 {
+        font-size: 3vw; /* Ajustez la taille selon vos préférences */
+        margin-top: 3vw; /* Déplace le bloc vers le bas de 220px */
+    }
+
+        /* Ajustez la taille de la police pour le slogan dans le header */
+        .header p {
+            font-size: 1.4vw; /* Ajustez la taille selon vos préférences */
+            margin-top: 3vw; /* Déplace le bloc vers le bas de 220px */
+        }
+        
+        .logo img {
+            max-width: 250px; /* Ajustez la taille du logo selon vos besoins */
+            height: auto;
+        }
+        .details {
+        
+    width: 100%; /* Ajustez cette valeur en fonction de vos besoins */
+        }
+        
+        .check-icon {
+            position: relative;
+            width: 50%;
+            height: 30px;
+        }
+        
+    
 }
