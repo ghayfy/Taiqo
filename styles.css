@@ -62,7 +62,7 @@
     }
 
     .contact-button:hover {
-        background-color: #ffcc00; /* Changement de couleur au survol */
+        background-color: grey; /* Changement de couleur au survol */
     }
 
     .check-icon {
@@ -142,7 +142,7 @@
         border-radius: 5px;
     }
     nav a:hover {
-        background-color: #ffcc00; /* Ajout d'une couleur de fond au survol */
+        background-color: grey; /* Ajout d'une couleur de fond au survol */
         color: #073f50; /* Changement de couleur au survol */
     }
 
@@ -417,7 +417,7 @@
     }
 
     #contact-form button:hover {
-        background-color: #0056b3;
+        background-color: grey;
     }
 
     #formMessage {
@@ -450,7 +450,7 @@
     }
 
     footer a:hover {
-        color: #ffcc00; /* Changement de couleur au survol */
+        color: grey; /* Changement de couleur au survol */
     }
 
     .social-icons {
@@ -529,7 +529,6 @@
         }
         
         /* Ajustez la taille de la police pour le slogan dans le header */
-    /* Ajustez la taille de la police pour le slogan dans le header */
         .header p {
             font-size: 3.1vw; /* Ajustez la taille selon vos préférences */
             margin-top: 10vw; /* Déplace le bloc vers le bas de 220px */
@@ -675,7 +674,53 @@
         footer {
             font-size: 13px;
             width: 95%;
+                }
+
             }
 
-    }
+
+    /* Media query pour les écrans de 768px x 1024px */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        /* Ajustez la taille de la police pour le titre dans le header */
+        .header h1 {
+            font-size: 4vw; /* Ajustez la taille selon vos préférences */
+            margin-top: 7vw; /* Déplace le bloc vers le haut */
+        }
+
+        /* Ajustez la taille de la police pour le slogan dans le header */
+        .header p {
+            font-size: 2.1vw; /* Ajustez la taille selon vos préférences */
+            margin-top: 5vw; /* Déplace le bloc vers le haut */
+            max-width: 80%; /* Ajustez la largeur maximale selon vos besoins */
+            margin: 0 auto; /* Ajout d'une marge automatique pour centrer horizontalement */
+        }
+
+
+        .logo img {
+            margin-top: 2vw; /* Déplace le bloc vers le bas de 220px */
+            max-width: 200px; /* Ajustez la taille du logo selon vos besoins */
+            height: auto;
     
+        }
+ 
+        .details-container {
+            display: none; /* Masquer l'élément */
+        }
+        
+        .details {
+            display: none; /* Masquer l'élément */
+        }
+        
+        .check-icon {
+            display: none; /* Masquer l'élément */
+        }
+   
+        nav a {
+            font-size: 12px;
+        }
+        footer {
+            font-size: 13px;
+            width: 95%;
+                }
+
+    }
