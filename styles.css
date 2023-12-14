@@ -723,7 +723,7 @@
             width: 95%;
                 }
 
-    }
+        }
     
         /* Media query pour les écrans de 1280px x 802px */
         @media (min-width: 1280px) and (max-height: 802px) {
