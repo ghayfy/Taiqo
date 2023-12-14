@@ -92,9 +92,7 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 40px; /* Réduisez la marge supérieure selon vos besoins */
-        margin-bottom: -5px; /* Ajoutez ou réduisez la marge inférieure selon vos besoins */
-        
-
+        margin-bottom: -80px; /* Ajoutez ou réduisez la marge inférieure selon vos besoins */        
     }
 
     .detail {
@@ -156,6 +154,8 @@
     h2 {
         color: #085e79;
     }
+
+    /* services */
     .titre-services {
         text-align: center; /* Centre le texte horizontalement */
         font-size: 50px; /* Ajustez la taille du texte selon vos préférences */
@@ -483,16 +483,18 @@
         grid-template-rows: auto 1fr auto;
     }
     
+
+    
     /****************************************************************************/
 
     @media screen and (min-width: 700px) and (max-height: 600px) { 
 
         
             /* Ajustez la taille de la police pour le titre dans le header */
-    .header h1 {
-        font-size: 3vw; /* Ajustez la taille selon vos préférences */
-        margin-top: 3vw; /* Déplace le bloc vers le bas de 220px */
-    }
+        .header h1 {
+            font-size: 3vw; /* Ajustez la taille selon vos préférences */
+            margin-top: 3vw; /* Déplace le bloc vers le bas de 220px */
+        }
 
         /* Ajustez la taille de la police pour le slogan dans le header */
         .header p {
@@ -506,7 +508,7 @@
         }
         .details {
         
-    width: 100%; /* Ajustez cette valeur en fonction de vos besoins */
+            width: 100%; /* Ajustez cette valeur en fonction de vos besoins */
         }
         
         .check-icon {
@@ -515,5 +517,165 @@
             height: 30px;
         }
         
+    }
+
+        /* Media query pour l'iPhone SE */
+        @media (max-width: 375px) and (max-height: 667px) {
+            
+        /* Ajustez la taille de la police pour le titre dans le header */
+        .header h1 {
+            font-size: 6vw; /* Ajustez la taille selon vos préférences */
+            margin-top: 20vw; /* Déplace le bloc vers le bas de 220px */
+        }
+        
+        /* Ajustez la taille de la police pour le slogan dans le header */
+    /* Ajustez la taille de la police pour le slogan dans le header */
+        .header p {
+            font-size: 3.1vw; /* Ajustez la taille selon vos préférences */
+            margin-top: 10vw; /* Déplace le bloc vers le bas de 220px */
+            max-width: 80%; /* Ajustez la largeur maximale selon vos besoins */
+            margin: 0 auto; /* Ajout d'une marge automatique pour centrer horizontalement */
+        }
+        .logo {
+            margin-top: 15vw; /* Déplace le bloc vers le bas de 220px */
+        }
+                
+        .logo img {
+            max-width: 150px; /* Ajustez la taille du logo selon vos besoins */
+            height: auto;
+        }
+        
+        .contact-button {
+            font-size: 20px;
+            padding: 10px 25px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-top: -5vw; /* Déplace le bloc vers le bas de 220px */
+        }
+
+        .details-container {
+            display: none; /* Masquer l'élément */
+        }
+        
+        .details {
+            display: none; /* Masquer l'élément */
+        }
+        
+        .check-icon {
+            display: none; /* Masquer l'élément */
+        }
+        
+
+        nav a {
+            font-size: 12px;
+        }
+
+        .titre-services {
+            text-align: center;
+            font-size: 30px; /* Ajustez la taille du texte pour l'iPhone SE */
+        }
     
-}
+        .container {
+            text-align: center;
+            margin-left: 5px; /* Ajout de marge à gauche du conteneur */
+            margin-right: 5px; /* Ajout de marge à droite du conteneur */
+        }
+    
+        .block {
+            position: relative; /* Change la position à relative pour positionner les enfants de manière absolue par rapport à celui-ci */
+            width: 100%;
+            margin: 0;
+            display: block;
+            height: auto;
+            border-radius: 12px;
+            overflow: hidden; /* Assurez-vous que le contenu débordant est caché */
+        }
+    
+        .block img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center center;
+            filter: brightness(60%);
+            border-radius: 12px;
+        }
+    
+        .centered-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #333;
+            z-index: 2;
+            width: 100%; /* Assurez-vous que le titre occupe toute la largeur du parent */
+        }
+    
+        .block h2 {
+            font-size: 20px; /* Ajustez la taille du titre pour l'iPhone SE */
+            margin: 0;
+            padding: 10px;
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: color 0.3s ease-in-out;
+            min-width: fit-content;
+            background-color: transparent !important;
+        }
+    
+        .block:hover h2 {
+            color: #d5d9db;
+        }
+
+        .features-section {
+            display: block; /* Passer à l'affichage en bloc pour les petits écrans */
+            text-align: center;
+            margin-top: 20px;
+        }
+    
+        .feature {
+            max-width: 250px;
+            margin: 0 auto 30px; /* Centrer les éléments et ajouter une marge inférieure */
+        }
+    
+        .feature img {
+            width: 100%;
+            max-height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            filter: brightness(0.8) saturate(2) hue-rotate(190deg);
+        }
+    
+        .feature h2 {
+            font-size: 20px; /* Ajustez la taille du titre pour l'iPhone SE */
+            margin-bottom: 10px;
+            color: #085e79;
+        }
+    
+        .feature p {
+            font-size: 16px; /* Ajustez la taille du texte pour l'iPhone SE */
+            color: #073f50;
+            line-height: 1.5;
+        }
+    
+        /* Style amélioré pour le titre et le texte */
+        .feature h2::before,
+        .feature h2::after,
+        .feature p::before,
+        .feature p::after {
+            content: none; /* Désactiver les guillemets élégants pour les petits écrans */
+        }
+        footer {
+            padding: 10px;
+        }
+        footer p {
+            font-size: 13px;
+            margin-bottom: 10px;
+            }
+        footer {
+            font-size: 13px;
+            width: 95%;
+            }
+
+    }
+    
