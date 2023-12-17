@@ -229,12 +229,22 @@
             <div class="form-group">
                 <textarea id="message" name="message" rows="4" placeholder="Votre message"></textarea>
             </div>
-
+            <div class="form-group">
+                <label for="agreeCheckbox" class="checkbox-label">
+                    <input type="checkbox" id="agreeCheckbox" name="agreeCheckbox" required>
+                    <span class="checkbox-text">En envoyant ce formulaire, j’accepte que les informations saisies soient utilisées par TAÏQO pour me recontacter, m’accompagner dans la réalisation de mon projet et m’informer de ses actualités. Je sais que je pourrai me désabonner à tout moment.<br>
+                    <a href="mentions-legales.html" style="text-decoration: none; font-weight: bold; color: #161d20;">En savoir plus sur le traitement de mes données</a>.</span>
+                </label>
+            </div>
+            
             <button type="button" onclick="submitForm()">Envoyer</button>
             <p id="formMessage"></p>
         </form>
     </div>
 </section>
+
+
+
 
 <footer>
     <div class="footer-links">

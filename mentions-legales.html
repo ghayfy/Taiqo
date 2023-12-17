@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="script.js"></script>
+    <title>TAÏQO</title>
+</head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentions Légales - TAÏQO</title>
@@ -11,33 +19,30 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #085e79;
             margin-left: 10px;
             margin-right: 10px; /* Ajout de marges à gauche et à droite */
         }
     
         header {
-    background-color: #a7bace;
-    color: #ecf0f1;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+            background-color: white;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 120px; /* Ajustez la hauteur selon vos besoins */
+        }
 
-    header img {
-    max-width: 120px; /* Ajustez la largeur du logo selon vos besoins */
-    height: auto;
-    }
-
-    h1 {
-        margin: 0; /* Supprime la marge par défaut du titre */
-    }
-
+        header img {
+            width: 300px; /* Ajustez la largeur selon vos besoins */
+            height: auto; /* Cela permet de conserver les proportions originales du logo */
+        }
 
 
-
-    nav {
+        nav {
             background-color: #085e79;
             padding: 10px;
             text-align: center;
@@ -56,18 +61,43 @@
 
         nav a {
             text-decoration: none;
-            color: #fff;
+            color: #085e79; /* Couleur du texte dans la navigation */
+            background-color: #fff;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: color 0.3s ease-in-out;
+            padding: 6px 11px;
+            border-radius: 5px;
         }
 
         nav a:hover {
-            color: #ffcc00; /* Couleur au survol */
+            background-color: #ffcc00;
+            color: #073f50;
+        }
+        .banner {
+            width: 100%;
+            max-height: 200px;
+            overflow: hidden;
         }
 
+        .banner img {
+            width: 100%;
+            max-height: 300px; /* Ajustez la hauteur maximale selon vos besoins */
+            object-fit: cover;
+        }
     
-        h1, h2 {
+        h1 {
+            margin: 0; /* Supprime la marge par défaut du titre */
+            color: #085e79;
+        }
+    
+        p {
+            color: #085e79;
+        }
+    
+        h1, h2, h3 {
             color: #085e79;
         }
     
@@ -79,126 +109,417 @@
             color: #085e79;
         }
     
-        footer {
-            background-color: #a7bace; 
-            padding: 10px;
-            text-align: center;
-        }
+
+            /* Partie formulaire de contact */
+    #contact-form {
+        background-color: #f4f4f4;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .contact-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    #contact-form h2 {
+        background-color: #fff;
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    #contact-form form {
+        display: grid;
+        gap: 20px;
+    }
+
+    .form-group {
+        position: relative;
+    }
+
+    #contact-form input,
+    #contact-form select,
+    #contact-form textarea {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    #contact-form select {
+        appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path d="M1 5l7 7 7-7H1z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 10px top 50%;
+    }
+
+    #contact-form button {
+        background-color: #fff;
+        color: #085e79;
+        padding: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        font-size: 18px;
+    }
+
+    #contact-form button:hover {
+        background-color: grey;
+    }
+
+    #formMessage {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #28a745;
+    }
+
+        /* ... case à cocher  ... */
+
+    #contact-form form .checkbox-label {
+        display: flex;
+        align-items: flex-start; /* aligne le haut de la case à cocher avec le haut du texte */
+        margin-left: -90px; /* ajustez cette valeur selon vos besoins */
+
+    }
+
+    #contact-form form .checkbox-text {
+        margin: 0; /* supprime toute marge autour du texte */
+        margin-left: -90px; /* ajustez cette valeur selon vos besoins */
+        font-family: Arial, sans-serif; /* utilise une police plus professionnelle */
+        line-height: 1.5; /* augmente l'espacement entre les lignes pour une meilleure lisibilité */
+        color: #333; /* utilise une couleur de texte plus douce */
+    }
+
+    #contact-form {
+        background: url('./public/contact.png') center/cover no-repeat;
+        padding: 50px 0;
+        text-align: center;
+        color: #fff; /* Ajoutez la couleur de texte souhaitée, par exemple, blanc (#ffffff) */
+        position: relative; /* Nécessaire pour positionner le calque d'ombre */
+    }
+    #contact-form form .checkbox-text {
+        font-family: 'Arial', sans-serif; /* Utilise une police plus professionnelle */
+        line-height: 1.6; /* Augmente l'espacement entre les lignes pour une meilleure lisibilité */
+        color: #0a2831; /* Couleur du texte */
+        position: relative; /* Permet de positionner le texte au-dessus du pseudo-élément */
+        z-index: 1; /* Place le texte au-dessus du pseudo-élément */
+        font-size: 18px;
+        text-align: left; /* Aligne le texte à gauche */
+    }
     
-        footer p {
-            color: #085e79;
-        }
+    #contact-form::before {
+        content: ''; /* Contenu vide nécessaire pour créer un pseudo-élément */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent noir */
+        z-index: -1; /* Place le pseudo-élément en dessous du contenu principal */
+    }
+    
+
+
+        /* Nouveau style pour le footer */
+        footer {
+            background-color: #073f50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            }
+
+            footer p {
+                font-size: 16px;
+                margin-bottom: 10px;
+                color: #fff;
+                
+            }
+
+            footer a {
+                text-decoration: none;
+                color: #fff;
+                margin: 0 15px;
+                transition: color 0.3s ease-in-out;
+            }
+
+            footer a:hover {
+                color: #ffcc00; /* Changement de couleur au survol */
+            }
+
+            .social-icons {
+                margin-top: 20px;
+            }
+
+            .social-icons a {
+                margin: 0 15px;
+                text-decoration: none;
+                color: #fff;
+                font-size: 24px;
+                transition: color 0.3s ease-in-out;
+            }
+
+            .social-icons a:hover {
+                color: #0e76a8 ; /* Changement de couleur au survol */
+            }
+
+
+            .contact-info {
+                margin-top: 20px;
+            }
+
+
+    
     
       /* Responsive Design */
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
+        @media screen and (max-width: 768px) {
+        body {
+            font-size: 14px;
+        }
 
-    header {
-        padding: 15px;
-        flex-direction: column; /* Met le contenu en colonne */
-        align-items: center; /* Centre les éléments */
-        text-align: center; /* Centre le texte */
-    }
+        header {
+            padding: 15px;
+            flex-direction: column; /* Met le contenu en colonne */
+            align-items: center; /* Centre les éléments */
+            text-align: center; /* Centre le texte */
+        }
 
-    header img {
-        margin-bottom: 15px; /* Ajoute de l'espace en bas du logo */
-    }
+        header img {
+            margin-bottom: 15px; /* Ajoute de l'espace en bas du logo */
+        }
 
-    nav {
-        text-align: center; /* Centre les liens du menu */
-        margin-top: 15px; /* Ajoute de l'espace au-dessus du menu */
-    }
+        nav {
+            text-align: center; /* Centre les liens du menu */
+            margin-top: 15px; /* Ajoute de l'espace au-dessus du menu */
+        }
 
-    nav a {
-        display: inline-block; /* Affiche les liens en ligne */
-        margin: 0 10px; /* Ajoute de l'espace de chaque côté des liens */
-    }
+        nav a {
+            display: inline-block; /* Affiche les liens en ligne */
+            margin: 0 10px; /* Ajoute de l'espace de chaque côté des liens */
+        }
 
-    section {
-        margin: 15px 0;
-    }
+        section {
+            margin: 15px 0;
+        }
 
-    footer {
-        padding: 5px;
-    }
-}
+        footer {
+            padding: 5px;
+        }
+        }
+        
     </style>
     
 </head>
 
 <body>
     <header>
-        <header>
-            <img src="public/logo.png" alt="Logo TAÏQO">
-            <h1>Mentions Légales</h1>
-     
-        </header>
+        <a href="index.html">
+            <img src="./public/logo.png" alt="Logo TAÏQO">
+        </a>
     </header>
     <nav>
         <ul>
-            <a href="index.html">ACCUEIL</a>       
-            <a href="a-propos.html">À PROPOS</a>
-            <a href="pov.html">P.O.V</a>
+            <li><a href="index.html">ACCUEIL</a></li>        
+            <li><a href="a-propos.html">À PROPOS</a></li>
+            <li><a href="pov.html">BLOG</a></li>
         </ul>
     </nav>
+    <div class="banner">
+        <img src="./public/mentions-legales.png" alt="Bannière">
+    </div>
     <section>
         <h2>Mentions Légales</h2>
         <p>
-            TAÏQO.com est édité par TAÏQO, une société enregistrée au registre du commerce sous le numéro [Numéro RCS] et dont le siège social est situé à Lyon.
+            En vertu de l’article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, il est précisé aux utilisateurs du site TAÏQO l’identité des différents intervenants dans le cadre de sa réalisation et de son suivi :
+            <li><strong>Propriétaire :</strong>TAÏQO – 92 boulevard Yves farges – 69007 Lyon</li>
+            <li><strong>Responsable publication :</strong>Fabrice Gueret</li>
+            <li><strong>Développement web :</strong> Fabrice Gueret – 06.13.82.23.97</li>
+            <li><strong>Hébergeur :</strong>O2Switch 222-224 Boulevard Gustave Flaubert. 63000 Clermont-Ferrand.</li>
+            <li><strong>Crédits graphiques :</strong>Fabrice Gueret – 06.13.82.23.97</li>
+            <li><strong>Crédits photos :</strong>Canva & unsplash</li>
+
         </p>
         <p>
-            Numéro de téléphone : "à venir" - Adresse e-mail : contact@taiqo.fr
+            TAÏQO, société soucieuse des droits des individus, notamment au regard des traitements automatisés et dans une volonté de transparence avec ses clients, a mis en place une politique reprenant l’ensemble de ces traitements, 
+            des finalités poursuivies par ces derniers ainsi que des moyens d’actions à la disposition des individus afin qu’ils puissent au mieux exercer leurs droits.
         </p>
         <p>
-            Directeur de la publication : Marjorie LEAUTHIER et Fabrice GUERET - Responsable éditorial : Marjorie LEAUTHIER et Fabrice GUERET
+            Pour toute information complémentaire sur la protection des données personnelles, nous vous invitons à consulter le site : https://www.cnil.fr/.
         </p>
         <p>
-            <p>
-                Bienvenue chez TAÏQO, votre partenaire de confiance en conseils d'entreprise. Nous mettons en œuvre une approche novatrice en combinant expertise humaine et stratégie digitale. Notre mission est de vous guider à travers les sphères stratégiques, organisationnelles et digitales pour optimiser vos performances.
-            </p>
-            <p>
-                Notre équipe dévouée est composée d'experts chevronnés, engagés à concrétiser chaque aspect de votre projet, de la planification à la mise en œuvre. Nous offrons un accompagnement personnalisé et des programmes de formation en management pour vous orienter à travers le labyrinthe complexe du monde des affaires.
-            </p>
-            <p>
-                Notre engagement envers l'excellence est inébranlable : nous visons à dépasser vos attentes à chaque étape. La satisfaction de nos clients est la boussole qui guide notre succès, et nous nous engageons à fournir des conseils de qualité exceptionnelle.
-            </p>
-            <h3>Nos valeurs :</h3>
-            <ul>
-                <li><strong>Satisfaction du client :</strong> Nous nous engageons à dépasser les attentes en fournissant des conseils de qualité exceptionnelle, adaptés à vos besoins spécifiques.</li>
-                <li><strong>Innovation :</strong> Nous exploitons les dernières avancées dans le conseil en stratégie et la transformation d'entreprise pour optimiser vos processus, vous offrant ainsi un meilleur retour sur investissement.</li>
-                <li><strong>Respect des engagements :</strong> Nous honorons nos engagements en menant chaque projet de la conception à la réalisation, garantissant ainsi des résultats de qualité dans les délais convenus.</li>
-            </ul>
-            <p>
-                Faites confiance à notre expertise et à notre engagement envers votre succès. Contactez-nous dès maintenant pour débuter la construction de votre avenir professionnel avec TAÏQO.
-            </p>
+            La poursuite de la navigation sur ce site vaut acceptation sans réserve des dispositions et conditions d’utilisation qui suivent. La version actuellement en ligne de ces conditions d’utilisation est la seule opposable pendant toute la durée d’utilisation du site et jusqu’à ce qu’une nouvelle version la remplace.
+        </p>
+        <p>
+            <h3>Article 1 – Accès au site</h3>
+            L’accès au site et son utilisation sont réservés à un usage strictement personnel. Vous vous engagez à ne pas utiliser ce site et les informations ou données qui y figurent à des fins commerciales, 
+            politiques, publicitaires et pour toute forme de sollicitation commerciale et notamment l’envoi de courriers électroniques non sollicités.
+        </p>
+        <p>
+            <h3>Article 2 – Contenu du site</h3>
+            Toutes les marques, photographies, textes, commentaires, illustrations, images animées ou non, séquences vidéo, sons, ainsi que toutes les applications informatiques qui pourraient être utilisées pour faire fonctionner ce site et plus généralement tous les éléments reproduits ou utilisés sur le site sont protégés par les lois en vigueur au titre de la propriété intellectuelle.
+            Ils sont la propriété pleine et entière de l’éditeur. Toute reproduction, représentation, utilisation ou adaptation, sous quelque forme que ce soit, de tout ou partie de ces éléments, y compris les applications informatiques, sans l’accord préalable et écrit de l’éditeur, sont strictement interdites. Le fait pour l’éditeur de ne pas engager de procédure dès la prise de connaissance de ces utilisations non autorisées ne vaut pas acceptation desdites utilisations et renonciation aux poursuites.
+        </p>
+        <p>
+            <h3>Article 3 – Gestion du site</h3>
+            Pour la bonne gestion du site, l’éditeur pourra à tout moment :
+            Suspendre, interrompre ou limiter l’accès à tout ou partie du site, réserver l’accès au site, ou à certaines parties du site, à une catégorie déterminée d’internautes;
+            Supprimer toute information pouvant perturber le fonctionnement ou entrant en contravention avec les lois nationales ou internationales;
+            Suspendre le site afin de procéder à des mises à jour
+        </p>
+        <p>
+            <h3>Article 4 – Responsabilités</h3>
+            La responsabilité de l’éditeur ne peut être engagée en cas de défaillance, panne, difficulté ou interruption de fonctionnement, empêchant l’accès au site ou à une de ses fonctionnalités.
+            Le matériel de connexion au site que vous utilisez est sous votre entière responsabilité. Vous devez prendre toutes les mesures appropriées pour protéger votre matériel et vos propres données notamment d’attaques virales par Internet. Vous êtes par ailleurs seul responsable des sites et données que vous consultez.
+            L’éditeur ne pourra être tenu responsable en cas de poursuites judiciaires à votre encontre :
+            Du fait de l’usage du site ou de tout service accessible via Internet;
+            Du fait du non-respect par vous des présentes conditions générales.
+            L’éditeur n’est pas responsable des dommages causés à vous-même, à des tiers et/ou à votre équipement du fait de votre connexion ou de votre utilisation du site et vous renoncez à toute action contre lui de ce fait.
+            Si l’éditeur venait à faire l’objet d’une procédure amiable ou judiciaire en raison de votre utilisation du site, il pourra se retourner contre vous pour obtenir l’indemnisation de tous les préjudices, sommes, condamnations et frais qui pourraient découler de cette procédure.
+        </p>
+        <p>
+            <h3>Article 5 – Liens hypertextes</h3>
+            La mise en place par les utilisateurs de tous liens hypertextes vers tout ou partie du site, toute information accessible via un lien vers d’autres sites n’est pas publiée par l’éditeur. L’éditeur ne dispose d’aucun droit sur le contenu présent dans ledit lien.
+        </p>
+        <p>
+            <h3>Article 6 – Collecte et protection des données</h3>
+            Vos données sont collectées par TAÏQO.
+            Une donnée à caractère personnel désigne toute information concernant une personne physique identifiée ou identifiable. Est réputée identifiable une personne qui peut être identifiée, directement ou indirectement, notamment par référence à un nom, un numéro d’identification ou à un ou plusieurs éléments spécifiques, propres à son identité physique, physiologique, génétique, psychique, économique, culturelle ou sociale.
+            Les informations personnelles pouvant être recueillies sur le site sont uniquement utilisées par l’éditeur pour la gestion des relations avec vous. Les données collectées sont remplies par l’utilisateur dans le formulaire de contact.
             
         </p>
-      
+        <p>
+            <h3>Article 7 – Droit d’accès, de rectification et de déréférencement de vos données</h3>
+            En application de la réglementation applicable aux données à caractère personnel, les utilisateurs disposent des droits suivants :
+            le droit d’accès : ils peuvent exercer leur droit d’accès, pour connaître les données personnelles les concernant, en écrivant à l’adresse électronique mentionnée. Dans ce cas, avant la mise en oeuvre de ce droit, la plateforme peut demander une preuve de l’identité de l’utilisateur afin d’en vérifier l’exactitude;
+            le droit de rectification : si les données à caractère personnel détenues par la plateforme sont inexactes, ils peuvent demander la mise à jour des informations;
+            le droit de suppression des données : les utilisateurs peuvent demander la suppression de leurs données à caractère personnel, conformément aux lois applicables en matière de protection des données;
+            le droit à la limitation du traitement : les utilisateurs peuvent demander à la plateforme de limiter le traitement des données personnelles conformément aux hypothèses prévues par le RGPD;
+            le droit de s’opposer au traitement des données : les utilisateurs peuvent s’opposer à ce que leurs données soient traitées conformément aux hypothèses prévues par le RGPD;
+            le droit à la portabilité : ils peuvent réclamer que la plateforme leur remette les données personnelles qu’ils ont fournies pour les transmettre à une nouvelle plateforme.
+            Vous pouvez exercer ce droit en nous contactant à l’adresse suivante :
+            TAÏQO
+            92 Boulevard Yves Farge
+            69007 Lyon
+            ou par email, à l’adresse : contact@taiqo.fr
+            Toute demande doit être accompagnée de la photocopie d’une pièce d’identité en cours de validité signé et faire mention de l’adresse à laquelle l’éditeur pourra contacter le demandeur. La réponse sera adressée dans le mois suivant la réception de la demande. Ce délai d’un mois peut être prolongé de deux mois si la complexité de la demande et/ou le nombre de demandes l’exigent.
+            De plus, et depuis la loi n°2016-1321 du 7 octobre 2016, les personnes qui le souhaitent, ont la possibilité d’organiser le sort de leurs données après leur décès. Pour plus d’information sur le sujet, vous pouvez consulter le site Internet de la CNIL : https://www.cnil.fr/.
+            Les utilisateurs peuvent aussi introduire une réclamation auprès de la CNIL sur le site : https://www.cnil.fr/.
+            Nous vous recommandons de nous contacter dans un premier temps avant de déposer une réclamation auprès de la CNIL, car nous sommes à votre entière disposition pour régler votre problème.
+        </p>
+        <p>
+            <h3>Article 8 – Utilisation des données</h3>
+            Les données personnelles collectées auprès des utilisateurs ont pour objectif de contacter l’utilisateur suite à sa demande, contact basé uniquement sur données renseignées dans le formulaire de contact.
+            Celle-ci également pourront faire l’objet de :
+            Prévention et détection de fraudes et gestion des incidents de sécurité
+            Gestion des éventuels litiges avec les utilisateurs
+        </p>
+        <p>
+            <h3>Article 9 – Politique de conservation des données</h3>
+            La plateforme conserve vos données pour la durée nécessaire pour vous fournir ses services et son assistance, dans la mesure raisonnablement nécessaire ou requise pour satisfaire aux obligations légales ou réglementaires, régler les litiges, empêcher les fraudes et abus ou appliquer nos modalités et conditions, nous pouvons également conserver certaines de vos informations si nécessaire, même si nous n’en avons plus besoin pour vous fournir nos services.
+        </p>
+        <p> 
+            <h3>Article 10 – Partage des données personnelles avec des tiers</h3>
+        </p>
+            Les données personnelles peuvent être partagées avec des sociétés tierces exclusivement dans l’Union Européenne, dans les cas suivants :
+            lorsque l’utilisateur publie, dans les zones de commentaires libres de la plateforme, des informations accessibles au public;
+            quand l’utilisateur autorise le site web d’un tiers à accéder à ses données
+            quand la plateforme recourt aux services de prestataires pour fournir l’assistance utilisateur. Ces prestataires disposent d’un accès limité aux données des utilisateurs, dans le cadre de l’exécution de ces prestations, et ont l’obligation contractuelle de les utiliser en conformité avec les dispositions de la réglementation applicable en matière de protection des données à caractère personnel;
+            Si la loi l’exige, la plateforme peut effectuer la transmission des données pour donner suite aux réclamations présentées contre la plateforme et se conformer aux procédures administratives et judiciaires.
+        </p>
+        <p> 
+            <h3>Article 11 – Cookies</h3>
+            La plateforme utilise des “cookies” .
+            Un “Cookie” ou traceur est un fichier électronique déposé sur un terminal (ordinateur, tablette, smartphone…) et lu par exemple lors de la consultation d’un site internet, de la lecture d’un courrier électronique, de l’installation ou de l’utilisation d’un logiciel ou d’une application mobile.
+        </p>
+        <p> 
+            <h3>Article 12 – Photographies et représentation</h3>
+            Les photographies utilisées sur le site ne sont pas contractuelles et n’engagent pas l’éditeur
+        </p>
+        <p> 
+            <h3>Article 13 – Loi applicable</h3>
+            Les présentes conditions d’utilisation du site sont régies par la loi française et soumises à la compétence du Tribunal de Commerce de Nantes, sous réserve d’une attribution de compétence spécifique découlant d’un texte de loi ou réglementaire particulier
+        </p>
+        <p>
+            Ces mentions légales et politique de confidentialité ont été créées par TAÏQO.  
+        </p>
     </section>
 
-    <section>
-        <h2>Politique de Confidentialité</h2>
-        <p>Nous collectons des informations personnelles lorsque vous soumettez des formulaires sur notre site ou lorsque vous nous contactez par e-mail. Ces informations peuvent inclure votre nom, votre adresse e-mail et d'autres données pertinentes.</p>
-        <p>Les informations que nous collectons sont utilisées pour répondre à vos demandes, traiter vos transactions et vous fournir des services de conseil en stratégie, organisation, transformation, marketing digital, coaching, formation management et gestion des risques.</p>
-        <p>Nous mettons en œuvre des mesures de sécurité appropriées pour protéger vos informations personnelles contre tout accès non autorisé ou divulgation.</p>
-        <p>Nous ne partageons pas vos informations personnelles avec des tiers sans votre consentement, sauf lorsque cela est requis par la loi.</p>
-        <p>Nous utilisons des cookies pour améliorer votre expérience de navigation sur notre site. Vous pouvez configurer votre navigateur pour refuser tous les cookies ou pour vous avertir lorsqu'un cookie est envoyé.</p>
-    </section>
+    <!-- ... Partie contact ... -->
+        <section id="contact-form">
+            <div class="contact-container">
+                <h2>Contactez-nous</h2>
+                <form id="contactForm" action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Nom & Prénom" required autocomplete="name">
+                    </div>
 
-    <section>
-        <h2>Conditions Générales d'Utilisation</h2>
-        <p>Bienvenue sur le site web TAÏQO (ci-après dénommé "TAÏQO.com"). En utilisant ce Site, vous acceptez les conditions générales d'utilisation énoncées ci-dessous. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le Site.</p>
-        <p>Le contenu du Site, y compris mais sans s'y limiter, les textes, graphiques, images, logos et logiciels, est la propriété de TAÏQO et est protégé par les lois sur la propriété intellectuelle en vigueur.</p>
-        <p>Vous êtes autorisé à consulter et à télécharger le contenu du Site à des fins personnelles et non commerciales. Toute utilisation non autorisée du contenu peut violer les lois sur la propriété intellectuelle.</p>
-        <p>TAÏQO ne peut être tenu responsable de tout dommage résultant de l'utilisation du Site ou de l'incapacité à l'utiliser.</p>
-        <p>TAÏQO se réserve le droit de modifier les présentes conditions d'utilisation à tout moment. Il est de votre responsabilité de vérifier régulièrement ces conditions.</p>
-    </section>
+                    <div class="form-group">
+                        <input type="text" id="company" name="company" placeholder="Société" required autocomplete="organization">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="grid">
+                            <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="email" required>
+                            <input type="tel" id="phone" name="phone" placeholder="Téléphone" autocomplete="tel">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>Choisissez une option</option>
+                            <option value="coaching">Coaching professionnel</option>
+                            <option value="strategie">Stratégie</option>
+                            <option value="organisation">Organisation</option>
+                            <option value="transformation">Transformation</option>
+                            <option value="gestion_crise">Gestion de crise</option>
+                            <option value="reglementation">Réglementation aéroportuaire</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" placeholder="Votre message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="agreeCheckbox" class="checkbox-label">
+                            <input type="checkbox" id="agreeCheckbox" name="agreeCheckbox" required>
+                            <span class="checkbox-text">En envoyant ce formulaire, j’accepte que les informations saisies soient utilisées par TAÏQO pour me recontacter, m’accompagner dans la réalisation de mon projet et m’informer de ses actualités. Je sais que je pourrai me désabonner à tout moment.<br>
+                            <a href="mentions-legales.html" style="text-decoration: none; font-weight: bold; color: #161d20;">En savoir plus sur le traitement de mes données</a>.</span>
+                        </label>
+                    </div>
+                    
+                    <button type="button" onclick="submitForm()">Envoyer</button>
+                    <p id="formMessage"></p>
+                </form>
+            </div>
+        </section>
+
+
 
     <footer>
-        <p>Pour toute question concernant les conditions d'utilisation, veuillez nous contacter à l'adresse suivante : contact@taiqo.com</p>
+        <div class="footer-links">
+            <a href="mentions-legales.html" class="mentions-legales">Mentions légales</a>
+            <a href="index.html">Accueil</a>
+            <a href="a-propos.html">À propos</a>
+            <a href="pov.html">Blog</a>
+        </div>
+        <div class="social-icons">
+            <!-- Icônes de médias sociaux avec Font Awesome -->
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    
+        <div class="contact-info">
+            <p>Email: contact@taiqo.fr</p>
+            <p>&copy; 2023 Taïqo. Tous droits réservés.</p>
+        </div>
     </footer>
+
 </body>
 
 </html>
+
+
