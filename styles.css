@@ -374,8 +374,10 @@
 
     #contact-form h2 {
         background-color: #fff;
-        font-size: 32px;
+        font-size: 28px;
         margin-bottom: 30px;
+        border-radius: 8px;
+        box-sizing: border-box;
     }
 
     #contact-form form {
